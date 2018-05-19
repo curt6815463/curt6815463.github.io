@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="keyword"  content="">
-    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="shortcut icon" href="/curt_tech/img/favicon.ico">
 
     <title>
         
@@ -16,8 +16,8 @@
     </title>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/aircloud.css">
-    <link rel="stylesheet" href="/css/gitment.css">
+    <link rel="stylesheet" href="/curt_tech/css/aircloud.css">
+    <link rel="stylesheet" href="/curt_tech/css/gitment.css">
     <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
     <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
     <!-- ga & ba script hoook -->
@@ -45,7 +45,7 @@
 <div class="nav" id="nav">
     <div class="avatar-name">
         <div class="avatar">
-            <img src="/static/curt.jpg" />
+            <img src="/curt_tech/static/curt.jpg" />
         </div>
         <div class="name">
             <i>Curt Liu</i>
@@ -60,19 +60,19 @@
                 </a>
             </li>
             <li >
-                <a href="/tags">
+                <a href="/curt_tech/tags">
                     <i class="iconfont icon-biaoqian1"></i>
                     <span>TAGS</span>
                 </a>
             </li>
             <li >
-                <a href="/archives">
+                <a href="/curt_tech/archives">
                     <i class="iconfont icon-guidang2"></i>
                     <span>ARCHIVES</span>
                 </a>
             </li>
             <li >
-                <a href="/about/">
+                <a href="/curt_tech/about/">
                     <i class="iconfont icon-guanyu2"></i>
                     <span>ABOUT</span>
                 </a>
@@ -144,7 +144,7 @@
 </ul>
 <p>題外話：webpack本身會解析ES6 module，將import關鍵字包裝成立即執行函數，裡面就放著要import的file程式碼</p>
 <p>事實上這些設定是比較困難也複雜的，最快的方法可以透過<code>vue-cli</code>來產生vue project的模板，裡面已經幫我們做好vue-loader的配置</p>
-<h3 id="vue-cli指令"><a href="#vue-cli指令" class="headerlink" title="vue-cli指令"></a>vue-cli指令</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 安裝全域vue-cli</span><br><span class="line"><span class="meta">$</span> npm install -g vue-cli</span><br><span class="line"></span><br><span class="line">// 初始化vue project</span><br><span class="line">// 格式：vue init &lt;template-name&gt; &lt;project-name&gt;</span><br><span class="line"><span class="meta">$</span> vue init webpack my-project</span><br></pre></td></tr></table></figure>
+<h3 id="vue-cli指令"><a href="#vue-cli指令" class="headerlink" title="vue-cli指令"></a>vue-cli指令</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 安裝全域vue-cli</span><br><span class="line"><span class="meta">$</span><span class="bash"> npm install -g vue-cli</span></span><br><span class="line"></span><br><span class="line">// 初始化vue project</span><br><span class="line">// 格式：vue init &lt;template-name&gt; &lt;project-name&gt;</span><br><span class="line"><span class="meta">$</span><span class="bash"> vue init webpack my-project</span></span><br></pre></td></tr></table></figure>
 <p>進入my-project資料夾內的build/webpack.base.conf.js可以看到vue-loader的設定<br><img src="https://i.imgur.com/b8FfO9L.png" alt=""></p>
 <h3 id="vue-loader-file說明"><a href="#vue-loader-file說明" class="headerlink" title="vue-loader file說明"></a>vue-loader file說明</h3><p>根據Vue-loader官方文件說明，一個.vue檔基本上由<code>template</code>,<code>script</code>,<code>style</code>三個部份組成</p>
 <ol>
@@ -202,11 +202,11 @@
 <script>
     // We expose some of the variables needed by the front end
     window.hexo_search_path = "search.xml"
-    window.hexo_root = "/"
+    window.hexo_root = "/curt_tech/"
     window.isPost = true
 </script>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
-<script src="/js/index.js"></script>
+<script src="/curt_tech/js/index.js"></script>
 <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 </html>
