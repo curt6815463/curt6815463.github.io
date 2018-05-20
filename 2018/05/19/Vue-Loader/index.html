@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
+    <meta name="description" content="前後 × 後端 × 全端">
     <meta name="keyword"  content="">
     <link rel="shortcut icon" href="/curt_tech/img/favicon.ico">
 
@@ -48,7 +48,13 @@
             <img src="/curt_tech/static/curt.jpg" />
         </div>
         <div class="name">
-            <i>Curt Liu</i>
+            <i>《Curt 技術雜記》</i>
+        </div>
+        <div class="description">
+            <i>前後 × 後端 × 全端</i>
+        </div>
+        <div class="description">
+            <i>乃是雲末梢神經的一端</i>
         </div>
     </div>
     <div class="contents" id="nav-content">
@@ -107,6 +113,7 @@
         </div>
     </div>
 </div>
+
         <div class="index-about-mobile">
             <i>  </i>
         </div>
@@ -124,6 +131,12 @@
 
     <div class="post-meta">
         <span class="attr">Post：<span>2018-05-19 17:37:01</span></span>
+        
+        <span class="attr">Tags：/
+        
+        <a class="tag" href="/curt_tech/tags/#vue" title="vue">vue</a>
+        <span>/</span>
+        
         
         </span>
         <span class="attr">Visit：<span id="busuanzi_value_page_pv"></span>
@@ -144,7 +157,7 @@
 </ul>
 <p>題外話：webpack本身會解析ES6 module，將import關鍵字包裝成立即執行函數，裡面就放著要import的file程式碼</p>
 <p>事實上這些設定是比較困難也複雜的，最快的方法可以透過<code>vue-cli</code>來產生vue project的模板，裡面已經幫我們做好vue-loader的配置</p>
-<h3 id="vue-cli指令"><a href="#vue-cli指令" class="headerlink" title="vue-cli指令"></a>vue-cli指令</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 安裝全域vue-cli</span><br><span class="line"><span class="meta">$</span><span class="bash"> npm install -g vue-cli</span></span><br><span class="line"></span><br><span class="line">// 初始化vue project</span><br><span class="line">// 格式：vue init &lt;template-name&gt; &lt;project-name&gt;</span><br><span class="line"><span class="meta">$</span><span class="bash"> vue init webpack my-project</span></span><br></pre></td></tr></table></figure>
+<h3 id="vue-cli指令"><a href="#vue-cli指令" class="headerlink" title="vue-cli指令"></a>vue-cli指令</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 安裝全域vue-cli</span><br><span class="line"><span class="meta">$</span> npm install -g vue-cli</span><br><span class="line"></span><br><span class="line">// 初始化vue project</span><br><span class="line">// 格式：vue init &lt;template-name&gt; &lt;project-name&gt;</span><br><span class="line"><span class="meta">$</span> vue init webpack my-project</span><br></pre></td></tr></table></figure>
 <p>進入my-project資料夾內的build/webpack.base.conf.js可以看到vue-loader的設定<br><img src="https://i.imgur.com/b8FfO9L.png" alt=""></p>
 <h3 id="vue-loader-file說明"><a href="#vue-loader-file說明" class="headerlink" title="vue-loader file說明"></a>vue-loader file說明</h3><p>根據Vue-loader官方文件說明，一個.vue檔基本上由<code>template</code>,<code>script</code>,<code>style</code>三個部份組成</p>
 <ol>
