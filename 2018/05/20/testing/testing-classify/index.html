@@ -95,7 +95,7 @@
     </div>
     
         <div id="toc" class="toc-article">
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#測試的工具怎麼分類？"><span class="toc-text">測試的工具怎麼分類？</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#隨意說說Unit-Test"><span class="toc-text">隨意說說Unit Test</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#工具分類"><span class="toc-text">工具分類</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Test-Runner"><span class="toc-text">Test Runner</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Testing-Framework"><span class="toc-text">Testing Framework</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Assertion-Libraries"><span class="toc-text">Assertion Libraries</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Testing-Plugins"><span class="toc-text">Testing Plugins</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#結論"><span class="toc-text">結論</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#測試的工具怎麼分類？"><span class="toc-text">測試的工具怎麼分類？</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#隨意說說Unit-Test"><span class="toc-text">隨意說說Unit Test</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#工具分類"><span class="toc-text">工具分類</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Test-Runner"><span class="toc-text">Test Runner</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Testing-Framework"><span class="toc-text">Testing Framework</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Assertion-Libraries"><span class="toc-text">Assertion Libraries</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Testing-Plugins"><span class="toc-text">Testing Plugins</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#結論"><span class="toc-text">結論</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#資料來源"><span class="toc-text">資料來源</span></a></li></ol></li></ol>
 </div>
     
 </div>
@@ -181,34 +181,14 @@
 <li>Mocha是Testing Framework</li>
 <li>Chai是Assertion Libaraies</li>
 <li>Sinon主要是Testing Plugins，並自帶Aserrtion Libaraies</li>
-<li>Jest主要是Testing Framework，並且有Assertion Libaraies + Testing Plugins</li>
-</ul>
-<blockquote>
+<li>Jest主要是Testing Framework，並且有Assertion Libaraies + Testing Plugins<blockquote>
 <p>Jest好棒棒</p>
 </blockquote>
-<!-- 首先必須先知道−Test Double(測試替身），它可以在測試中代替那些會造成我們不便的funciton
->Test Double類似於電影中一些危險動作，導演們會請專業替身代替影星們去執行這些事情。
+</li>
+</ul>
+<h2 id="資料來源"><a href="#資料來源" class="headerlink" title="資料來源"></a>資料來源</h2><p><a href="http://amzotti.github.io/testing/2015/03/16/what-is-the-difference-between-a-test-runner-testing-framework-assertion-library-and-a-testing-plugin/" target="_blank" rel="noopener">http://amzotti.github.io/testing/2015/03/16/what-is-the-difference-between-a-test-runner-testing-framework-assertion-library-and-a-testing-plugin/</a></p>
+<p>本篇文章的工具四種分類為參考amzotti想法，並加上自己的觀點</p>
 
-主要有五種
-
-1. Spy
-2. Stub
-3. Mock
-4. Fake
-5. Dummy
-
-不過為我會以Sinon.js（JavaScript的Testing Plugins套件)的實作角度去解釋功用
-
-#### Spy
-
-spy是間諜的意思，如字面上它可以監測某個function，並取得她的資訊，像是：function被call了幾次、被call的時候帶了哪些參數、回傳值是什麼……等
-
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">it(<span class="string">'show firstCall args'</span>,<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> spy = sinon.spy()</span><br><span class="line">    spy(<span class="string">'a'</span>,<span class="string">'b'</span>)</span><br><span class="line">    <span class="built_in">console</span>.log(spy.firstCall.args) <span class="comment">//['a', 'b']</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<p>第四行看到使用<code>spy.firstCall.args</code>可取得function被呼叫時所帶入的參數<br>換作剛剛isExpire的例子：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> product = &#123;</span><br><span class="line">    isExpire:<span class="function"><span class="keyword">function</span>(<span class="params">expireDate</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">let</span> now = (<span class="keyword">new</span> <span class="built_in">Date</span>()).getTime()</span><br><span class="line">        <span class="keyword">let</span> expire = <span class="built_in">Date</span>.parse(expireDate)</span><br><span class="line">        <span class="keyword">return</span> (now &gt; expire) ? <span class="literal">true</span> : <span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">describe(<span class="string">'Spy Example'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line">    it(<span class="string">'isExpire should call once'</span>,<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">let</span> spy = sinon.spy(product,<span class="string">'isExpire'</span>)</span><br><span class="line">        product.isExpire(<span class="string">'1995/2/3'</span>)</span><br><span class="line">        <span class="built_in">console</span>.log(spy.calledOnce) <span class="comment">//結果為1</span></span><br><span class="line">        sinon.assert.calledOnce(spy)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<p>11行指定監測product上的isExpire function，再使用sionn自帶的Assertion Libraries：<code>calledOnec</code>，確認它只被呼叫一次 。</p>
-<p>註：當然你也可以使用Chai的Assertion Libraries。</p>
-<h4 id="Stub-–-gt"><a href="#Stub-–-gt" class="headerlink" title="Stub –&gt;"></a>Stub –&gt;</h4>-->
         
         <div id="comment-container">
         </div>
