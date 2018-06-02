@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="前後 × 後端 × 全端">
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        前端路由 - undefined
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i>  </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar">
+            <img src="/static/curt.jpg" />
+        </div>
+        <div class="name">
+            <i>《Curt 技術雜記》</i>
+        </div>
+        <div class="description">
+            <i>前後 × 後端 × 全端</i>
+        </div>
+        <div class="description">
+            <i>乃是雲末梢神經的一端</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>HOME</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>TAGS</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>ARCHIVES</span>
+                </a>
+            </li>
+            <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>ABOUT</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>SEARCH</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前端路由"><span class="toc-text">前端路由</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#路由"><span class="toc-text">路由</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#前端後端？"><span class="toc-text">前端後端？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#問題點"><span class="toc-text">問題點</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#AJAX"><span class="toc-text">AJAX</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#分離吧！！"><span class="toc-text">分離吧！！</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#前後端的架構好處"><span class="toc-text">前後端的架構好處</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#回到前端路由"><span class="toc-text">回到前端路由</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何實作前端路由？"><span class="toc-text">如何實作前端路由？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-使用hash"><span class="toc-text">1. 使用hash #</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-使用history-pushState-history-replaceState"><span class="toc-text">2. 使用history.pushState history.replaceState</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#參考資料"><span class="toc-text">參考資料</span></a></li></ol></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">search</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+
+        <div class="index-about-mobile">
+            <i>  </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        前端路由
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">Post：<span>2018-06-01 16:32:35</span></span>
+        
+        <span class="attr">Tags：/
+        
+        <a class="tag" href="/tags/#JS" title="JS">JS</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">Visit：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content ">
+        <h1 id="前端路由"><a href="#前端路由" class="headerlink" title="前端路由"></a>前端路由</h1><h2 id="路由"><a href="#路由" class="headerlink" title="路由"></a>路由</h2><blockquote>
+<p>在網頁中，路由代表了網址( url )與頁面呈現之間的關係。</p>
+</blockquote>
+<p>例如：在網址列輸入</p>
+<ul>
+<li><a href="https://curt6815463.github.io/">https://curt6815463.github.io/</a></li>
+<li><a href="https://curt6815463.github.io/tags/">https://curt6815463.github.io/tags/</a></li>
+</ul>
+<p>會看到不同的畫面，因此可以說</p>
+<ul>
+<li>路由為<code>/</code>時，顯示文章列表畫面</li>
+<li>路由為<code>/tags</code>時，顯示有tag分類的文章列表</li>
+</ul>
+<h2 id="前端後端？"><a href="#前端後端？" class="headerlink" title="前端後端？"></a>前端後端？</h2><p>在講前端路由之前，瑞凡你知道<code>前後端</code>是什麼東西嗎？</p>
+<p>在 <code>ajax</code> 發明之前，事實上網頁沒有前後端之分，當使用者要瀏覽網頁時，都是從後端吐一份被整理好的檔案( html )，這裡所謂整理好意思是：我想要呈現在瀏覽器畫面的資料，已經在後端直接跟資料庫溝通，並且渲染上去</p>
+<p>圖解來說大概是這樣：<br><img src="https://i.imgur.com/IMxhNhG.png" alt=""></p>
+<h3 id="問題點"><a href="#問題點" class="headerlink" title="問題點"></a>問題點</h3><ul>
+<li>使用者每次只要想換頁面，就必須跟後端再發一次請求，然後頁面就會整個重新整理並且吃到新的HTML/CSS，</li>
+<li>後端要負責 1.跟資料庫溝通 2.處理商業邏輯 3.畫面渲染邏輯</li>
+</ul>
+<h3 id="AJAX"><a href="#AJAX" class="headerlink" title="AJAX"></a>AJAX</h3><p>AJAX是JavaScript的網頁非同步請求技術，簡單來說我發出去的請求，只跟後端拿必要的資料，並且也不會讓網頁重新整理</p>
+<h3 id="分離吧！！"><a href="#分離吧！！" class="headerlink" title="分離吧！！"></a>分離吧！！</h3><p>在AJAX出來之後，就有人開始思考把處理資料的部分切一邊，處理畫面的切一邊，也就是現在所謂前端，那麼需要串接畫面邏輯的資料就靠AJAX去達成，後端負責出資料就好</p>
+<h3 id="前後端的架構好處"><a href="#前後端的架構好處" class="headerlink" title="前後端的架構好處"></a>前後端的架構好處</h3><ul>
+<li>以前的後端就不用處理太多東西</li>
+<li>前端使用AJAX可以讓畫面不必重整，增加使用者體驗</li>
+<li>每次只取需要的資料，可減少 server 的 loading</li>
+</ul>
+<p>圖畫起來會像是：</p>
+<p><img src="https://i.imgur.com/tmCoFMi.png" alt=""></p>
+<h2 id="回到前端路由"><a href="#回到前端路由" class="headerlink" title="回到前端路由"></a>回到前端路由</h2><p>由上敘述可以得知，如果今天使用後端路由，每當我更換 route 那勢必整個頁面都會重新載入，那麼當在前端使用路由技術配上ajax，就可製造出：<code>沒有整理頁面但是頁面資料卻有變換的效果</code>，對使用者體驗來說是大大加分</p>
+<h2 id="如何實作前端路由？"><a href="#如何實作前端路由？" class="headerlink" title="如何實作前端路由？"></a>如何實作前端路由？</h2><p>要在前端更換網址卻又不啟動重新整理的方式有兩個</p>
+<h3 id="1-使用hash"><a href="#1-使用hash" class="headerlink" title="1. 使用hash #"></a>1. 使用<code>hash #</code></h3><p>可在url加上符號<code>#</code>，像是在 <code>https://curt6815463.github.io/</code> 加上 <code>#123</code> 變成<br><code>https://curt6815463.github.io/#123</code> 並不會讓頁面重新整理，而我們可以使用 <code>hashchange</code> 去監聽事件，並在裡面做出畫面改變</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.addEventListener(<span class="string">"hashchange"</span>, () =&gt; &#123;</span><br><span class="line">    改變畫面</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>可使用兩種方式控制url</p>
+<ol>
+<li><p>使用 HTML tag <code>&lt;a&gt;</code></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href="#123"&gt;to 123&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用location.hash</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">location.hash=<span class="string">"#123"</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="2-使用history-pushState-history-replaceState"><a href="#2-使用history-pushState-history-replaceState" class="headerlink" title="2. 使用history.pushState history.replaceState"></a>2. 使用<code>history.pushState</code> <code>history.replaceState</code></h3><p>HTML5在 <code>history</code> 中新增了兩個功能 <code>history.pushState</code> <code>history.replaceState</code>，它可以讓我們加入或修改歷史，但不會真的發出資源的請求</p>
+<p>他們同樣都帶入三個參數（state object, title, URL)，不過今天我們只要專注在第三個參數<code>URL</code>，另外兩個細節有興趣可參考<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/History/pushState" target="_blank" rel="noopener">MDN</a></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">history.pushState(<span class="literal">null</span>,<span class="literal">null</span>,<span class="string">"a.html"</span>)</span><br><span class="line"></span><br><span class="line">history.replaceState(<span class="literal">null</span>,<span class="literal">null</span>,<span class="string">"b.html"</span>)</span><br></pre></td></tr></table></figure>
+<p>所以當你改變畫面呈現方式時，就可以 call <code>pushState</code> or <code>replaceState</code>，造成使用者覺得好像有切換頁面的效果，不過他們兩個差別是什麼？</p>
+<p>實測結果如下</p>
+<p><img src="https://media.giphy.com/media/3Z1ppTua0q9wVIbCd8/giphy.gif" alt=""></p>
+<p>可以發現點了四次 pushState 需要按四次上一頁才能會到 localhost:3333，但是如果 replaceState 點四次按一次上一頁就回到最原本頁面</p>
+<p>replaceState 是修改目前的歷史紀錄，並不會像pushState創造一個新的</p>
+<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ul>
+<li><a href="https://developer.mozilla.org/zh-TW/docs/Web/API/History_API" target="_blank" rel="noopener">MDN</a></li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/History/pushState" target="_blank" rel="noopener">MDN</a></li>
+<li><a href="https://github.com/kaola-fed/blog/issues/137" target="_blank" rel="noopener">淺談前端路由</a></li>
+</ul>
+
+        
+        <div id="comment-container">
+        </div>
+    </div>
+</div>
+
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+
+
+
+// (function() {
+// var d = document, s = d.createElement('script');
+// s.src = 'https://https-curt6815463-github-io.disqus.com/embed.js';
+// s.setAttribute('data-timestamp', +new Date());
+// (d.head || d.body).appendChild(s);
+// })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.xml"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+</html>
