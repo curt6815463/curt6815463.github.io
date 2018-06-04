@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="前後 × 後端 × 全端">
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        Wooden Puzzle Block 遊戲實作 - undefined
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i>  </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar">
+            <img src="/static/curt.jpg" />
+        </div>
+        <div class="name">
+            <i>《Curt 技術雜記》</i>
+        </div>
+        <div class="description">
+            <i>前後 × 後端 × 全端</i>
+        </div>
+        <div class="description">
+            <i>乃是雲末梢神經的一端</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>HOME</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>TAGS</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>ARCHIVES</span>
+                </a>
+            </li>
+            <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>ABOUT</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>SEARCH</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Wooden-Puzzle-Block-遊戲實作"><span class="toc-text">Wooden Puzzle Block 遊戲實作</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#遊戲介紹"><span class="toc-text">遊戲介紹</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#開發過程"><span class="toc-text">開發過程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-畫出遊戲的版面"><span class="toc-text">1. 畫出遊戲的版面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-創建table"><span class="toc-text">2. 創建table</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-宣告各種方塊的資料，並且畫在畫面上"><span class="toc-text">3. 宣告各種方塊的資料，並且畫在畫面上</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#畫面效果"><span class="toc-text">畫面效果</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-處理拖動事件"><span class="toc-text">4. 處理拖動事件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#滑鼠按下去"><span class="toc-text">滑鼠按下去</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#滑鼠拖動"><span class="toc-text">滑鼠拖動</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#畫面效果-1"><span class="toc-text">畫面效果</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#滑鼠放下瞬間"><span class="toc-text">滑鼠放下瞬間</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#最終畫面"><span class="toc-text">最終畫面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#實作結果"><span class="toc-text">實作結果</span></a></li></ol></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">search</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+
+        <div class="index-about-mobile">
+            <i>  </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        Wooden Puzzle Block 遊戲實作
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">Post：<span>2018-06-05 01:37:56</span></span>
+        
+        <span class="attr">Tags：/
+        
+        <a class="tag" href="/tags/#JS" title="JS">JS</a>
+        <span>/</span>
+        
+        <a class="tag" href="/tags/#CSS" title="CSS">CSS</a>
+        <span>/</span>
+        
+        <a class="tag" href="/tags/#HTML" title="HTML">HTML</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">Visit：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content ">
+        <h1 id="Wooden-Puzzle-Block-遊戲實作"><a href="#Wooden-Puzzle-Block-遊戲實作" class="headerlink" title="Wooden Puzzle Block 遊戲實作"></a>Wooden Puzzle Block 遊戲實作</h1><h2 id="遊戲介紹"><a href="#遊戲介紹" class="headerlink" title="遊戲介紹"></a>遊戲介紹</h2><p><a href="https://www.youtube.com/watch?v=bpSTRpy9qYo&amp;t=649s" target="_blank" rel="noopener">Youtube</a></p>
+<h2 id="開發過程"><a href="#開發過程" class="headerlink" title="開發過程"></a>開發過程</h2><h3 id="1-畫出遊戲的版面"><a href="#1-畫出遊戲的版面" class="headerlink" title="1. 畫出遊戲的版面"></a>1. 畫出遊戲的版面</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;frame&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;row&quot;&gt;</span><br><span class="line">      &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;</span><br><span class="line">      &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;</span><br><span class="line">      &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;</span><br><span class="line">      &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;</span><br><span class="line">      &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;</span><br><span class="line">      &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;</span><br><span class="line">      &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;</span><br><span class="line">      &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;</span><br><span class="line">      &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;</span><br><span class="line">      &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    ....總共有10個row 100個col</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<p>套上CSS</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.frame</span>&#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">500px</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">500px</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">2em</span> auto;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.row</span>&#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">50px</span>;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.col</span>&#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">50px</span>;</span><br><span class="line">  <span class="attribute">outline</span>: <span class="number">1px</span> solid red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>畫面效果<br><img src="https://i.imgur.com/8qItSTs.png" alt=""></p>
+<h3 id="2-創建table"><a href="#2-創建table" class="headerlink" title="2. 創建table"></a>2. 創建table</h3><p>雖然畫出畫面，不過到時候我們會需要有個二維陣列，用來記錄每個格子的狀態，像是：狀態0畫出白色，狀態1畫出藍色</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> table = []</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> y = <span class="number">0</span> ; y &lt; <span class="number">10</span> ; y++)&#123;</span><br><span class="line">  table[y] = []</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> x = <span class="number">0</span> ; x &lt; <span class="number">10</span> ; x++)&#123;</span><br><span class="line">    table[y][x] = <span class="number">0</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>我們來 <code>console.table(table)</code> 看看結果<br><img src="https://i.imgur.com/WMJcPk8.png" alt=""></p>
+<h3 id="3-宣告各種方塊的資料，並且畫在畫面上"><a href="#3-宣告各種方塊的資料，並且畫在畫面上" class="headerlink" title="3. 宣告各種方塊的資料，並且畫在畫面上"></a>3. 宣告各種方塊的資料，並且畫在畫面上</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> shape = [</span><br><span class="line">    [</span><br><span class="line">      [<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>],</span><br><span class="line">      [<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>],</span><br><span class="line">      [<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>],</span><br><span class="line">      [<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>],</span><br><span class="line">      [<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>]</span><br><span class="line">    ],</span><br><span class="line">    [</span><br><span class="line">      [<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>],</span><br><span class="line">      [<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>],</span><br><span class="line">      [<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>],</span><br><span class="line">      [<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>],</span><br><span class="line">      [<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>]</span><br><span class="line">    ],</span><br><span class="line">    [</span><br><span class="line">      [<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>],</span><br><span class="line">      [<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>],</span><br><span class="line">      [<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>],</span><br><span class="line">      [<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>],</span><br><span class="line">      [<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>]</span><br><span class="line">    ],</span><br><span class="line">    [</span><br><span class="line">      [<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>],</span><br><span class="line">      [<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>],</span><br><span class="line">      [<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>],</span><br><span class="line">      [<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>],</span><br><span class="line">      [<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>]</span><br><span class="line">    ],</span><br><span class="line">    [</span><br><span class="line">      [<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>],</span><br><span class="line">      [<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>],</span><br><span class="line">      [<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>],</span><br><span class="line">      [<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>],</span><br><span class="line">      [<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>]</span><br><span class="line">    ],</span><br><span class="line">    [</span><br><span class="line">      [<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>],</span><br><span class="line">      [<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>],</span><br><span class="line">      [<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>],</span><br><span class="line">      [<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>],</span><br><span class="line">      [<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>]</span><br><span class="line">    ],</span><br><span class="line">    [</span><br><span class="line">      [<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>],</span><br><span class="line">      [<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>],</span><br><span class="line">      [<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>],</span><br><span class="line">      [<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>],</span><br><span class="line">      [<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>]</span><br><span class="line">    ]</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<p>做好資料後我們就可以畫在瀏覽器上，首先在html加上<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;pendingBox&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;pendingOne&quot;&gt;</span><br><span class="line"></span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;pendingTwo&quot;&gt;</span><br><span class="line"></span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;pendingThree&quot;&gt;</span><br><span class="line"></span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
+<p>CSS 加上<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.pendingBox</span>&#123;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.pendingOne</span>&#123;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">left</span>:<span class="number">0px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.pendingTwo</span>&#123;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">300px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.pendingThree</span>&#123;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">600px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 填滿的style */</span></span><br><span class="line"><span class="selector-class">.blue</span>&#123;</span><br><span class="line">  <span class="attribute">background-color</span>: blue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>pendingBox是個容器負責放那三個準備被使用者拖動的方塊<br>pedningOne~Three負責當作方塊節點，讓我們將資料配合DOM製作上去<br>創一個負責繪製Box的function<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//三個方塊的對照表，我們要知道 one two three分別產生了哪種 shpae</span></span><br><span class="line"><span class="keyword">var</span> pendingBoxComparisonTable = &#123;&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createPendingBox</span>(<span class="params">pendingBox</span>) </span>&#123;</span><br><span class="line">  <span class="comment">//隨機產生 shape 的編號</span></span><br><span class="line">  <span class="keyword">let</span> randNum = <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * (shape.length<span class="number">-1</span> - <span class="number">0</span> + <span class="number">1</span>)) + <span class="number">0</span>;</span><br><span class="line">  <span class="comment">// 放.row</span></span><br><span class="line">  <span class="keyword">let</span> nodeY</span><br><span class="line">  <span class="comment">// 放.row 底下的.col</span></span><br><span class="line">  <span class="keyword">let</span> nodeX</span><br><span class="line">  shape[randNum].some(<span class="function">(<span class="params">row, y</span>) =&gt;</span> &#123;</span><br><span class="line">    nodeY = <span class="built_in">document</span>.createElement(<span class="string">'div'</span>)</span><br><span class="line">    nodeY.classList.add(<span class="string">'row'</span>)</span><br><span class="line">    row.some(<span class="function">(<span class="params">value, x</span>) =&gt;</span> &#123;</span><br><span class="line">      nodeX = <span class="built_in">document</span>.createElement(<span class="string">'div'</span>)</span><br><span class="line">      nodeX.classList.add(<span class="string">'col'</span>)</span><br><span class="line">      <span class="keyword">if</span>(value)&#123;nodeX.classList.add(<span class="string">'blue'</span>)&#125;</span><br><span class="line">      nodeY.appendChild(nodeX)</span><br><span class="line"></span><br><span class="line">      <span class="built_in">document</span>.querySelector(<span class="string">`.<span class="subst">$&#123;pendingBox&#125;</span>`</span>).appendChild(nodeY)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;)</span><br><span class="line">  pendingBoxComparisonTable[pendingBox] = shape[randNum]</span><br><span class="line">&#125;</span><br><span class="line">createPendingBox(<span class="string">'pendingOne'</span>)</span><br><span class="line">createPendingBox(<span class="string">'pendingTwo'</span>)</span><br><span class="line">createPendingBox(<span class="string">'pendingThree'</span>)</span><br></pre></td></tr></table></figure></p>
+<h4 id="畫面效果"><a href="#畫面效果" class="headerlink" title="畫面效果"></a>畫面效果</h4><p><img src="https://i.imgur.com/fHFrUou.png" alt=""><br>下面多了三個隨機方塊</p>
+<h3 id="4-處理拖動事件"><a href="#4-處理拖動事件" class="headerlink" title="4. 處理拖動事件"></a>4. 處理拖動事件</h3><p>我們要讓Box自由自在的拖動，並且畫到表格上方</p>
+<h4 id="滑鼠按下去"><a href="#滑鼠按下去" class="headerlink" title="滑鼠按下去"></a>滑鼠按下去</h4><p>三個 Box 分別監聽 <code>mousedown event</code> ，當按下去時記下他們起始位置，並且設定 <code>selectedBox</code> 讓等等的 mousemove 事件知道該移動哪個 BOX 的 <code>top</code> <code>left</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> pendingOne = <span class="built_in">document</span>.querySelector(<span class="string">'.pendingOne'</span>)</span><br><span class="line"><span class="keyword">var</span> pendingTwo = <span class="built_in">document</span>.querySelector(<span class="string">'.pendingTwo'</span>)</span><br><span class="line"><span class="keyword">var</span> pendingThree = <span class="built_in">document</span>.querySelector(<span class="string">'.pendingThree'</span>)</span><br><span class="line"><span class="comment">// 設定滑鼠正在點下去的狀態（還沒放開）</span></span><br><span class="line"><span class="keyword">var</span> isMouseDown = <span class="literal">false</span></span><br><span class="line"><span class="keyword">var</span> startX = <span class="number">0</span>, startY = <span class="number">0</span>, endX = <span class="number">0</span>, endY = <span class="number">0</span></span><br><span class="line"><span class="keyword">var</span> selectedBox = <span class="string">''</span></span><br><span class="line">pendingOne.addEventListener(<span class="string">'mousedown'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">  isMouseDown = <span class="literal">true</span></span><br><span class="line">  startX = e.clientX</span><br><span class="line">  startY = e.clientY</span><br><span class="line">  selectedBox = <span class="string">'pendingOne'</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">pendingTwo.addEventListener(<span class="string">'mousedown'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">  isMouseDown = <span class="literal">true</span></span><br><span class="line">  startX = e.clientX</span><br><span class="line">  startY = e.clientY</span><br><span class="line">  selectedBox = <span class="string">'pendingTwo'</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">pendingThree.addEventListener(<span class="string">'mousedown'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">  isMouseDown = <span class="literal">true</span></span><br><span class="line">  startX = e.clientX</span><br><span class="line">  startY = e.clientY</span><br><span class="line">  selectedBox = <span class="string">'pendingThree'</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h4 id="滑鼠拖動"><a href="#滑鼠拖動" class="headerlink" title="滑鼠拖動"></a>滑鼠拖動</h4><p>滑鼠移動時根據他<code>移動時的終點</code>，扣掉一開始按下去的距離就是我們所要設定的<code>left</code> <code>top</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.addEventListener(<span class="string">'mousemove'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(isMouseDown)&#123;</span><br><span class="line">    endX = e.clientX</span><br><span class="line">    endY = e.clientY</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> offsetX = endX - startX</span><br><span class="line">    <span class="keyword">let</span> offsetY = endY - startY</span><br><span class="line">    <span class="keyword">let</span> pendingBox = <span class="built_in">document</span>.querySelector(<span class="string">`.<span class="subst">$&#123;selectedBox&#125;</span>`</span>);</span><br><span class="line">    <span class="keyword">switch</span> (selectedBox) &#123;</span><br><span class="line">      <span class="keyword">case</span> <span class="string">'pendingOne'</span>:</span><br><span class="line">        offsetX += <span class="number">0</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">      <span class="keyword">case</span> <span class="string">'pendingTwo'</span>:</span><br><span class="line">        offsetX += <span class="number">300</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">      <span class="keyword">case</span> <span class="string">'pendingThree'</span>:</span><br><span class="line">        offsetX += <span class="number">600</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">      <span class="keyword">default</span>:</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    pendingBox.style.left = offsetX + <span class="string">"px"</span></span><br><span class="line">    pendingBox.style.top = offsetY + <span class="string">"px"</span></span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h4 id="畫面效果-1"><a href="#畫面效果-1" class="headerlink" title="畫面效果"></a>畫面效果</h4><p><img src="https://media.giphy.com/media/BCg5D6bDs3h48AhqaT/giphy.gif" alt=""></p>
+<h4 id="滑鼠放下瞬間"><a href="#滑鼠放下瞬間" class="headerlink" title="滑鼠放下瞬間"></a>滑鼠放下瞬間</h4><p>這部分的邏輯會很多，首先我會想知道 Box 最後是在哪個座標被放下來的，並且對應到 table 在哪</p>
+<p>下圖中有 A B 兩點，我只要 B 的 x y 扣掉 Ａ 的 x y 就可以知道方塊被拖進來會相應到什麼位置</p>
+<p><img src="https://scontent.fkhh1-2.fna.fbcdn.net/v/t1.15752-9/s2048x2048/34474996_1785874701495978_2263218512522641408_n.jpg?_nc_cat=0&amp;oh=4df5d3c6a44b17fc4026f41c010404b7&amp;oe=5BBEBA0C" alt=""></p>
+<p>因為我的表格中的每一格都是50px，因此假設最後 Bx - Ax &amp;&amp; By - Bx 算出來是 75 55 ，將他們個別除以 50 就知道他們墜落在表格中哪個部分，不過我會再加上25作為緩衝區域，我們來看下面的圖</p>
+<p><img src="https://scontent.fkhh1-2.fna.fbcdn.net/v/t1.15752-9/34529458_1785880891495359_451174563414278144_n.jpg?_nc_cat=0&amp;oh=d2750ca88ca124f29d56ff0c631bf763&amp;oe=5B7BA46D" alt=""></p>
+<p>雖然他的左上角靠在表格（0,0），不過事實上他更靠近中間，應該要算在中間</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.addEventListener(<span class="string">'mouseup'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(isMouseDown)&#123;</span><br><span class="line">        isMouseDown = <span class="literal">false</span></span><br><span class="line">        <span class="keyword">let</span> pendingBox = <span class="built_in">document</span>.querySelector(<span class="string">`.<span class="subst">$&#123;selectedBox&#125;</span>`</span>);</span><br><span class="line">        <span class="keyword">let</span> posX = <span class="built_in">Math</span>.floor(((pendingBox.getBoundingClientRect().left - frameX) + <span class="number">25</span>) / <span class="number">50</span>)</span><br><span class="line">        <span class="keyword">let</span> posY = <span class="built_in">Math</span>.floor(((pendingBox.getBoundingClientRect().top - frameY) + <span class="number">25</span>) / <span class="number">50</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>取到該放的位置之後就可以將他畫上去了</p>
+<p>話的時候必須注意</p>
+<ul>
+<li>有沒有超過邊界</li>
+<li>位置上是否已經有東西</li>
+</ul>
+<p>最後如果話成功就回傳 success<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> result = fillTable(pendingBoxComparisonTable[selectedBox],&#123;<span class="attr">x</span>:posX,<span class="attr">y</span>:posY&#125;)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fillTable</span>(<span class="params">box,point</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> fillGridList = []</span><br><span class="line">  <span class="keyword">let</span> outOfBound = <span class="literal">false</span></span><br><span class="line">  <span class="keyword">let</span> boxFillEmpty = <span class="literal">true</span></span><br><span class="line">  box.some(<span class="function">(<span class="params">row, y</span>) =&gt;</span> &#123;</span><br><span class="line">    row.some(<span class="function">(<span class="params">value, x</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">if</span>(value === <span class="number">1</span>)&#123;</span><br><span class="line">        <span class="keyword">if</span>((y+point.y) &gt;= <span class="number">0</span> &amp;&amp; (x+point.x) &gt;= <span class="number">0</span> &amp;&amp;</span><br><span class="line">          (y+point.y) &lt; <span class="number">10</span> &amp;&amp; ((x+point.x) &lt; <span class="number">10</span>))&#123;</span><br><span class="line">          <span class="keyword">if</span>(checkGridEmpty(x+point.x,y+point.y))&#123;</span><br><span class="line">            <span class="keyword">let</span> count = (y+point.y)*<span class="number">10</span> + (x+point.x)</span><br><span class="line">            grid = &#123;</span><br><span class="line">              x:x+point.x,</span><br><span class="line">              y:y+point.y,</span><br><span class="line">              count:count</span><br><span class="line">            &#125;</span><br><span class="line">            fillGridList.push(grid)</span><br><span class="line">          &#125;</span><br><span class="line">          <span class="keyword">else</span> &#123;</span><br><span class="line">            boxFillEmpty = <span class="literal">false</span></span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">          outOfBound = <span class="literal">true</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;)</span><br><span class="line">  <span class="keyword">if</span>(!outOfBound)&#123;</span><br><span class="line">    <span class="keyword">if</span>(boxFillEmpty)&#123;</span><br><span class="line">      fillGridList.some(<span class="function">(<span class="params">grid</span>)=&gt;</span>&#123;</span><br><span class="line">        cols[grid.count].classList.add(<span class="string">'blue'</span>)</span><br><span class="line">        table[grid.y][grid.x] = <span class="number">1</span></span><br><span class="line">      &#125;)</span><br><span class="line">      <span class="keyword">return</span> <span class="string">'success'</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>如果回傳success我們需要先把畫成功的dom先砍了（因為他只是畫面效果），接者檢查是否有直行或橫列填滿一條了</p>
+<p>getFullLine() 會找到 x y 軸有哪些是滿的，結果像是這樣<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="attr">x</span>:[<span class="number">2</span>,<span class="number">5</span>,<span class="number">6</span>] y:[<span class="number">1</span>,<span class="number">3</span>,<span class="number">7</span>]&#125;</span><br></pre></td></tr></table></figure></p>
+<p>接著再根據這些index去把他們的狀態都改成0並且讓他的style取消blue<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(result === <span class="string">'success'</span>)&#123;</span><br><span class="line">  removePendingBoxDom(selectedBox)</span><br><span class="line">  <span class="comment">// createPendingBox(selectedBox)</span></span><br><span class="line">  clearFullLine(getFullLine())</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">removePendingBoxDom</span>(<span class="params">selectedBox</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> removeDom = <span class="built_in">document</span>.querySelector(<span class="string">`.<span class="subst">$&#123;selectedBox&#125;</span>`</span>)</span><br><span class="line">  <span class="keyword">while</span>(removeDom.hasChildNodes())&#123;</span><br><span class="line">    removeDom.removeChild(removeDom.lastChild)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">clearFullLine</span>(<span class="params">fullLine</span>) </span>&#123;</span><br><span class="line">  fullLine.xFullLine.some(<span class="function">(<span class="params">x</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span> ; i &lt; <span class="number">10</span> ; i++)&#123;</span><br><span class="line">        table[x][i] = <span class="number">0</span></span><br><span class="line">        cols[x*<span class="number">10</span>+i].classList.remove(<span class="string">'blue'</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">  fullLine.yFullLine.some(<span class="function">(<span class="params">y</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span> ; i &lt; <span class="number">10</span> ; i++)&#123;</span><br><span class="line">        table[i][y] = <span class="number">0</span></span><br><span class="line">        cols[y+i*<span class="number">10</span>].classList.remove(<span class="string">'blue'</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>最後若是 pendingOne~three 都成功填滿了(代表也都被移除節點了），則要另外再加入新的三個 Box</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(pendingOne.childElementCount === <span class="number">0</span> &amp;&amp;</span><br><span class="line">       pendingTwo.childElementCount === <span class="number">0</span> &amp;&amp;</span><br><span class="line">       pendingThree.childElementCount === <span class="number">0</span>)&#123;</span><br><span class="line">      createPendingBox(<span class="string">'pendingOne'</span>)</span><br><span class="line">      createPendingBox(<span class="string">'pendingTwo'</span>)</span><br><span class="line">      createPendingBox(<span class="string">'pendingThree'</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="最終畫面"><a href="#最終畫面" class="headerlink" title="最終畫面"></a>最終畫面</h2><p><img src="https://media.giphy.com/media/kPCaLOf9w5znh21dK2/giphy.gif" alt=""></p>
+<h2 id="實作結果"><a href="#實作結果" class="headerlink" title="實作結果"></a>實作結果</h2><p><a href="https://curt6815463.github.io/woodenPuzzleBlock/">https://curt6815463.github.io/woodenPuzzleBlock/</a></p>
+
+        
+        <div id="comment-container">
+        </div>
+    </div>
+</div>
+
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+
+
+
+// (function() {
+// var d = document, s = d.createElement('script');
+// s.src = 'https://https-curt6815463-github-io.disqus.com/embed.js';
+// s.setAttribute('data-timestamp', +new Date());
+// (d.head || d.body).appendChild(s);
+// })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.xml"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+</html>
