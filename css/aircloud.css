@@ -1,8 +1,11 @@
 /*varibles*/
-* {
-  /* font-family: "italic", Helvetica, Arial, "Heiti SC", "Microsoft YaHei", sans-serif; */
+body {
+  font-family: "italic", Helvetica, Arial, "Heiti SC", "Microsoft YaHei", sans-serif;
+}
+.code > pre {
   font-family: monospace;
 }
+
 body,
 html {
   margin: 0;
@@ -119,7 +122,7 @@ body {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.nav .avatar-name .name i {
+.nav .avatar-name .name  {
   font-size: 20px;
   font-family: "italic" !important;
   font-weight: 300;
