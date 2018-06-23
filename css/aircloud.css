@@ -116,6 +116,7 @@ body {
   box-sizing: border-box;
 }
 .nav .avatar-name .avatar img {
+  border-radius: 10px;
   width: 100px;
   height: 100px;
 }
@@ -306,6 +307,7 @@ body {
     position: relative;
     top: 0;
     width: 100%;
+    margin-left: 0px;
   }
   .nav .avatar-name {
     border-bottom: none;
@@ -761,11 +763,11 @@ body {
     flex-direction: row;
   }
   .index-container .index-left {
-    width: 180px;
+    width: 300px;
   }
   .index-container .index-middle {
     flex: 1;
-    max-width: calc(100% - 180px);
+    max-width: calc(100% - 300px);
   }
 }
 @media screen and (max-width: 680px) {
