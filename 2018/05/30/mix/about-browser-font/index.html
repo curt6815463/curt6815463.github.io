@@ -9,7 +9,7 @@
     <meta name="author" content="Curt Liu">
     <meta name="description" content="Curt => 技術 x 足跡，網頁前端部落格">
     <meta name="keyword"  content="Curt => 技術 x 足跡，網頁前端部落格">
-    
+
     <link rel="shortcut icon" href="/img/favicon.ico">
 
 
@@ -29,7 +29,7 @@
     <meta property="og:image" content="http://avatars0.githubusercontent.com/u/13904994?s=460&v=4" />
     <title>
         
-        關於瀏覽器的字型
+        關於瀏覽器的字型 - Curt =&gt; 技術 × 足跡
         
     </title>
 
@@ -121,7 +121,7 @@
     </div>
     
         <div id="toc" class="toc-article">
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-text">關於瀏覽器的字型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">在網頁中的應該使用奇數還是偶數的字體？為什麽呢？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">原因</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">chrome 瀏覽器限制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">1. -webkit-text-size-adjust: none</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">2. transform:scale(0.7)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">冷知識</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">瀏覽器字體單位</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">em</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">rem</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">參考資料</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#關於瀏覽器的字型"><span class="toc-text">關於瀏覽器的字型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#在網頁中的應該使用奇數還是偶數的字體？為什麽呢？"><span class="toc-text">在網頁中的應該使用奇數還是偶數的字體？為什麽呢？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#原因"><span class="toc-text">原因</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#chrome-瀏覽器限制"><span class="toc-text">chrome 瀏覽器限制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-webkit-text-size-adjust-none"><span class="toc-text">1. -webkit-text-size-adjust: none</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-transform-scale-0-7"><span class="toc-text">2. transform:scale(0.7)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#冷知識"><span class="toc-text">冷知識</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#瀏覽器字體單位"><span class="toc-text">瀏覽器字體單位</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#em"><span class="toc-text">em</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#rem"><span class="toc-text">rem</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#參考資料"><span class="toc-text">參考資料</span></a></li></ol></li></ol>
 </div>
     
 </div>
@@ -173,46 +173,30 @@
 </span>
     </div>
     <div class="post-content ">
-        <h1>關於瀏覽器的字型</h1>
-<h2>在網頁中的應該使用奇數還是偶數的字體？為什麽呢？</h2>
-<p>通常在網頁上看到的字體大小都是偶數，像是12px 14px 16px，為什麼大家不喜歡用奇數的大小呢？</p>
-<h2>原因</h2>
-<ul>
+        <h1 id="關於瀏覽器的字型"><a href="#關於瀏覽器的字型" class="headerlink" title="關於瀏覽器的字型"></a>關於瀏覽器的字型</h1><h2 id="在網頁中的應該使用奇數還是偶數的字體？為什麽呢？"><a href="#在網頁中的應該使用奇數還是偶數的字體？為什麽呢？" class="headerlink" title="在網頁中的應該使用奇數還是偶數的字體？為什麽呢？"></a>在網頁中的應該使用奇數還是偶數的字體？為什麽呢？</h2><p>通常在網頁上看到的字體大小都是偶數，像是12px 14px 16px，為什麼大家不喜歡用奇數的大小呢？</p>
+<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><ul>
 <li>字體渲染的時候可能會不對稱，像是<code>中</code>這個字，中間一條線畫下來平分兩邊，勢必有一邊會大點或小點</li>
-<li>在過去window內建的宋體，一開始也只提供12px、14px、16px......等字型</li>
+<li>在過去window內建的宋體，一開始也只提供12px、14px、16px……等字型</li>
 <li>通常設計師設計圖樣時會使用偶數字，所以到前端也是自然用偶數切版</li>
 <li>偶數可以方便用相對的方式來改變字型大小，例如預設字體通常會用 16px，因為 16 可以除很多次 2 後還是整數</li>
 </ul>
-<h2>chrome 瀏覽器限制</h2>
-<p>在 chrome 瀏覽器中， font-size 最小限制在12px，如果設定12以下都會被自動轉成12px，如果今天有這種需求話該如何解決？</p>
-<h3>1. -webkit-text-size-adjust: none</h3>
-<p>可以在 CSS 中設定
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">-webkit-text-size-adjust</span>: <span class="selector-tag">none</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="chrome-瀏覽器限制"><a href="#chrome-瀏覽器限制" class="headerlink" title="chrome 瀏覽器限制"></a>chrome 瀏覽器限制</h2><p>在 chrome 瀏覽器中， font-size 最小限制在12px，如果設定12以下都會被自動轉成12px，如果今天有這種需求話該如何解決？</p>
+<h3 id="1-webkit-text-size-adjust-none"><a href="#1-webkit-text-size-adjust-none" class="headerlink" title="1. -webkit-text-size-adjust: none"></a>1. -webkit-text-size-adjust: none</h3><p>可以在 CSS 中設定<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">-webkit-text-size-adjust</span>: <span class="selector-tag">none</span></span><br></pre></td></tr></table></figure></p>
 <p>不過這個屬性在 27.0 版之前才會 work</p>
-<h3>2. transform:scale(0.7)</h3>
-<p>使用CSS3的屬性 transform:scale()
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">transform</span><span class="selector-pseudo">:scale(0.7)</span>;</span><br></pre></td></tr></table></figure></p>
+<h3 id="2-transform-scale-0-7"><a href="#2-transform-scale-0-7" class="headerlink" title="2. transform:scale(0.7)"></a>2. transform:scale(0.7)</h3><p>使用CSS3的屬性 transform:scale()<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">transform</span><span class="selector-pseudo">:scale(0.7)</span>;</span><br></pre></td></tr></table></figure></p>
 <p>不過他會以<code>區塊</code>為單位放大縮小，因此切版上需做些改變</p>
-<h3>冷知識</h3>
-<p>chrome的字體確實最小只能調到12px，不過嚴格說起來應該是：<code>最小只能呈現出畫面 100% 時 12px 的像素大小</code></p>
-<p>圖中是畫面縮放100%時，文章列表字體為12px
-<img src="https://i.imgur.com/KRMPrWC.png" alt="">
-如果使用<code>cmd +</code>將畫面放大到200%，把字體調成6px是會更小的！！！
-<img src="https://i.imgur.com/Zqi6y2p.png" alt=""></p>
-<h2>瀏覽器字體單位</h2>
-<p>瀏覽器字體的單位除了 px 還有 pt、em、rem，那麼 em 與 rem 差別是什麼呢？</p>
-<h3>em</h3>
-<p>em 是依照父層的字體大小為基準，做等比例放大，例如</p>
-<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&apos;father&apos;&gt;</span><br><span class="line">    父</span><br><span class="line">    &lt;div class=&apos;children&apos;&gt;</span><br><span class="line">    子</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
-<p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.father</span>&#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.children</span>&#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">1em</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="冷知識"><a href="#冷知識" class="headerlink" title="冷知識"></a>冷知識</h3><p>chrome的字體確實最小只能調到12px，不過嚴格說起來應該是：<code>最小只能呈現出畫面 100% 時 12px 的像素大小</code></p>
+<p>圖中是畫面縮放100%時，文章列表字體為12px<br><img src="https://i.imgur.com/KRMPrWC.png" alt=""><br>如果使用<code>cmd +</code>將畫面放大到200%，把字體調成6px是會更小的！！！<br><img src="https://i.imgur.com/Zqi6y2p.png" alt=""></p>
+<h2 id="瀏覽器字體單位"><a href="#瀏覽器字體單位" class="headerlink" title="瀏覽器字體單位"></a>瀏覽器字體單位</h2><p>瀏覽器字體的單位除了 px 還有 pt、em、rem，那麼 em 與 rem 差別是什麼呢？</p>
+<h3 id="em"><a href="#em" class="headerlink" title="em"></a>em</h3><p>em 是依照父層的字體大小為基準，做等比例放大，例如</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&apos;father&apos;&gt;</span><br><span class="line">    父</span><br><span class="line">    &lt;div class=&apos;children&apos;&gt;</span><br><span class="line">    子</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.father</span>&#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.children</span>&#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">1em</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>這時子層的實際大小就是 14px</p>
-<h3>rem</h3>
-<p>rem 則是不管在哪一層都會依照 <code>html tag</code> 為基準(應該說 root 層）做等比例放大，例如：</p>
-<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">    &lt;/head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        &lt;div class=&apos;father&apos;&gt;</span><br><span class="line">         父</span><br><span class="line">            &lt;div class=&apos;children&apos;&gt;</span><br><span class="line">             子</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
-<p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">html</span>&#123;</span><br><span class="line"><span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.father</span>&#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.children</span>&#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">1em</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="rem"><a href="#rem" class="headerlink" title="rem"></a>rem</h3><p>rem 則是不管在哪一層都會依照 <code>html tag</code> 為基準(應該說 root 層）做等比例放大，例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">    &lt;/head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        &lt;div class=&apos;father&apos;&gt;</span><br><span class="line">         父</span><br><span class="line">            &lt;div class=&apos;children&apos;&gt;</span><br><span class="line">             子</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">html</span>&#123;</span><br><span class="line"><span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.father</span>&#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.children</span>&#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">1em</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>子層會以root為基準，所以實際字型大小會是 16px</p>
-<h2>參考資料</h2>
-<p><a href="http://www.hexschool.com/2016/01/02/2016-08-08-em-vs-rem/" target="_blank" rel="noopener">六角</a></p>
+<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><p><a href="http://www.hexschool.com/2016/01/02/2016-08-08-em-vs-rem/" target="_blank" rel="noopener">六角</a></p>
 <p><a href="https://blog.csdn.net/jian_xi/article/details/79346477" target="_blank" rel="noopener">jmin_coming</a></p>
 
         

@@ -9,7 +9,7 @@
     <meta name="author" content="Curt Liu">
     <meta name="description" content="Curt => 技術 x 足跡，網頁前端部落格">
     <meta name="keyword"  content="Curt => 技術 x 足跡，網頁前端部落格">
-    
+
     <link rel="shortcut icon" href="/img/favicon.ico">
 
 
@@ -29,7 +29,7 @@
     <meta property="og:image" content="http://avatars0.githubusercontent.com/u/13904994?s=460&v=4" />
     <title>
         
-        Fish Shell 起手式
+        Fish Shell 起手式 - Curt =&gt; 技術 × 足跡
         
     </title>
 
@@ -121,7 +121,7 @@
     </div>
     
         <div id="toc" class="toc-article">
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-text">Fish Shell 起手式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">查看shell</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">Install</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">Set Default</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">non-standard shell</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">no changes made</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">當上述兩個問題解決後在使用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">fisherman</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">安裝 fisherman</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">安裝主題</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">參考資源</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Fish-Shell-起手式"><span class="toc-text">Fish Shell 起手式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#查看shell"><span class="toc-text">查看shell</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Install"><span class="toc-text">Install</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Set-Default"><span class="toc-text">Set Default</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#non-standard-shell"><span class="toc-text">non-standard shell</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#no-changes-made"><span class="toc-text">no changes made</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#當上述兩個問題解決後在使用"><span class="toc-text">當上述兩個問題解決後在使用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fisherman"><span class="toc-text">fisherman</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安裝-fisherman"><span class="toc-text">安裝 fisherman</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安裝主題"><span class="toc-text">安裝主題</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#參考資源"><span class="toc-text">參考資源</span></a></li></ol></li></ol>
 </div>
     
 </div>
@@ -170,54 +170,41 @@
 </span>
     </div>
     <div class="post-content ">
-        <h1>Fish Shell 起手式</h1>
-<h2>查看shell</h2>
-<p>先使用指令看自己用哪個 <code>shell</code>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo $SHELL</span><br></pre></td></tr></table></figure></p>
+        <h1 id="Fish-Shell-起手式"><a href="#Fish-Shell-起手式" class="headerlink" title="Fish Shell 起手式"></a>Fish Shell 起手式</h1><h2 id="查看shell"><a href="#查看shell" class="headerlink" title="查看shell"></a>查看shell</h2><p>先使用指令看自己用哪個 <code>shell</code><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo $SHELL</span><br></pre></td></tr></table></figure></p>
 <p><img src="https://i.imgur.com/vau74Hz.png" alt=""></p>
-<p>可以看到目前我使用 zsh
-那麽就來安裝 fish 吧！！</p>
-<h2>Install</h2>
-<p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install fish</span><br></pre></td></tr></table></figure></p>
+<p>可以看到目前我使用 zsh<br>那麽就來安裝 fish 吧！！</p>
+<h2 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install fish</span><br></pre></td></tr></table></figure>
 <p>灌好之後就可以在 terminal 執行 fish 將 <code>zsh shell</code> 轉成 <code>fish shell</code></p>
-<p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fish</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fish</span><br></pre></td></tr></table></figure>
 <p><img src="https://i.imgur.com/9YQP9xZ.png" alt=""></p>
 <p>可以看到成功的轉成 fish</p>
-<h2>Set Default</h2>
-<p>我不想要每次打開都執行一次 <code>fish</code> 所以我們來將他設定成 default</p>
+<h2 id="Set-Default"><a href="#Set-Default" class="headerlink" title="Set Default"></a>Set Default</h2><p>我不想要每次打開都執行一次 <code>fish</code> 所以我們來將他設定成 default</p>
 <p>使用 <code>chsh -s &lt;shell 路徑&gt;</code></p>
 <p>在這之前我們先看看 <code>fish</code> 的路徑在哪裡</p>
-<p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">which fish</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">which fish</span><br></pre></td></tr></table></figure>
 <p><img src="https://i.imgur.com/lJMvNUE.png" alt=""></p>
 <p>知道之後就來設定了</p>
-<p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chsh -s /usr/local/bin/fish</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chsh -s /usr/local/bin/fish</span><br></pre></td></tr></table></figure>
 <p>其實可以有更方便方法</p>
-<p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chsh -s `which fish`</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chsh -s `which fish`</span><br></pre></td></tr></table></figure>
 <p>有可能會發生</p>
-<h3><code>non-standard shell</code></h3>
-<p><img src="https://i.imgur.com/djUctIo.png" alt=""></p>
+<h3 id="non-standard-shell"><a href="#non-standard-shell" class="headerlink" title="non-standard shell"></a><code>non-standard shell</code></h3><p><img src="https://i.imgur.com/djUctIo.png" alt=""></p>
 <p>這時候你要去 <code>/etc</code> 底下的 shells 設定（記得使用sudo，避免 shells 檔沒有 write 權限)</p>
-<p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /etc</span><br><span class="line">sudo vim shells</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /etc</span><br><span class="line">sudo vim shells</span><br></pre></td></tr></table></figure>
 <p><img src="https://i.imgur.com/Zp2KOxn.png" alt=""></p>
 <p>加上 <code>/usr/local/bin/fish</code> 這行之後重開 <code>terminal</code></p>
-<h3><code>no changes made</code></h3>
-<p>可參考這篇 <a href="https://apple.stackexchange.com/questions/88278/change-default-shell-from-bash-to-zsh" target="_blank" rel="noopener">change default shell</a></p>
-<h3>當上述兩個問題解決後在使用</h3>
-<p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chsh -s `which fish`</span><br></pre></td></tr></table></figure></p>
+<h3 id="no-changes-made"><a href="#no-changes-made" class="headerlink" title="no changes made"></a><code>no changes made</code></h3><p>可參考這篇 <a href="https://apple.stackexchange.com/questions/88278/change-default-shell-from-bash-to-zsh" target="_blank" rel="noopener">change default shell</a></p>
+<h3 id="當上述兩個問題解決後在使用"><a href="#當上述兩個問題解決後在使用" class="headerlink" title="當上述兩個問題解決後在使用"></a>當上述兩個問題解決後在使用</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chsh -s `which fish`</span><br></pre></td></tr></table></figure>
 <p>之後打開 <code>terminal</code> 預設就會使用 <code>fish shell</code> 了</p>
-<h2>fisherman</h2>
-<blockquote>
+<h2 id="fisherman"><a href="#fisherman" class="headerlink" title="fisherman"></a>fisherman</h2><blockquote>
 <p>The fish-shell plugin manager</p>
 </blockquote>
 <p>fisherman 是 fish-shell plugin的管理者</p>
 <p>你可能發現我的 fish-shell 也有著漂亮的箭頭，是因為使用 fisherman 來設定了 agnoster 主題 (原本的 zsh 也有這個主題設定)</p>
-<h3>安裝 fisherman</h3>
-<p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher</span><br></pre></td></tr></table></figure></p>
-<h3>安裝主題</h3>
-<p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fisher install hauleth/agnoster</span><br></pre></td></tr></table></figure></p>
-<p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">agnoster powerline</span><br></pre></td></tr></table></figure></p>
-<h2>參考資源</h2>
-<p><a href="https://apple.stackexchange.com/questions/88278/change-default-shell-from-bash-to-zsh" target="_blank" rel="noopener">login shell</a></p>
+<h3 id="安裝-fisherman"><a href="#安裝-fisherman" class="headerlink" title="安裝 fisherman"></a>安裝 fisherman</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher</span><br></pre></td></tr></table></figure>
+<h3 id="安裝主題"><a href="#安裝主題" class="headerlink" title="安裝主題"></a>安裝主題</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fisher install hauleth/agnoster</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">agnoster powerline</span><br></pre></td></tr></table></figure>
+<h2 id="參考資源"><a href="#參考資源" class="headerlink" title="參考資源"></a>參考資源</h2><p><a href="https://apple.stackexchange.com/questions/88278/change-default-shell-from-bash-to-zsh" target="_blank" rel="noopener">login shell</a></p>
 <p><a href="https://stackoverflow.com/questions/28444740/how-to-use-vi-mode-in-fish-shell" target="_blank" rel="noopener">fish vim mode</a></p>
 <p><a href="https://askubuntu.com/questions/26439/how-do-i-set-fish-as-the-default-shell" target="_blank" rel="noopener">set default shell</a></p>
 <p><a href="https://github.com/fisherman/fisherman" target="_blank" rel="noopener">fisherman</a></p>
