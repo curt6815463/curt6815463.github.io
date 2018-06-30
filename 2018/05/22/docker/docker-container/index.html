@@ -5,14 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="寫過的叫足跡 想寫的是憧憬">
-    <meta name="keyword"  content="">
+
+    <meta name="author" content="Curt Liu">
+    <meta name="description" content="Curt => 技術 x 足跡，網頁前端部落格">
+    <meta name="keyword"  content="Curt => 技術 x 足跡，網頁前端部落格">
+    
     <link rel="shortcut icon" href="/img/favicon.ico">
 
 
     <meta itemprop="name" content="Curt => 技術 x 足跡">
     <meta itemprop="image" content="https://avatars0.githubusercontent.com/u/13904994?s=460&v=4">
-    <meta itemprop="description" content="網頁前端技術部落格">
+    <meta itemprop="description" content="Curt => 技術 x 足跡，網頁前端部落格">
     <meta name="google-site-verification" content="g4J2dF7TI9JMaBzZpVaIdg_Np2eGmpnIn9YQOO9qPgI" />
 
 
@@ -21,7 +24,7 @@
     <meta property="og:type" content="video.movie" />
     <meta property="og:url" content="https://dev-curt.me/" />
     <meta property="og:site_name" content="Curt => 技術 x 足跡">
-    <meta property="og:description" content="網頁前端技術部落格">
+    <meta property="og:description" content="Curt => 技術 x 足跡，網頁前端部落格">
     <meta property="og:locale" content="zh-tw">
     <meta property="og:image" content="http://avatars0.githubusercontent.com/u/13904994?s=460&v=4" />
     <title>
@@ -118,7 +121,7 @@
     </div>
     
         <div id="toc" class="toc-article">
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Docker-－-Container-篇"><span class="toc-text">Docker － Container 篇</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#container-容器）"><span class="toc-text">container(容器）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#建立容器"><span class="toc-text">建立容器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#取得映像檔"><span class="toc-text">取得映像檔</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#背景狀態執行"><span class="toc-text">背景狀態執行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#停止容器"><span class="toc-text">停止容器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#進入容器"><span class="toc-text">進入容器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#刪除容器"><span class="toc-text">刪除容器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#匯入匯出容器"><span class="toc-text">匯入匯出容器</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-text">Docker － Container 篇</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">container(容器）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">建立容器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">取得映像檔</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">背景狀態執行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">停止容器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">進入容器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">刪除容器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">匯入匯出容器</span></a></li></ol></li></ol>
 </div>
     
 </div>
@@ -167,28 +170,39 @@
 </span>
     </div>
     <div class="post-content ">
-        <h1 id="Docker-－-Container-篇"><a href="#Docker-－-Container-篇" class="headerlink" title="Docker － Container 篇"></a>Docker － Container 篇</h1><h2 id="container-容器）"><a href="#container-容器）" class="headerlink" title="container(容器）"></a>container(容器）</h2><p>其實就是image跑在記憶體中的樣子（實例），是一個輕量級的沙箱，彼此之間都是獨立的。</p>
-<h2 id="建立容器"><a href="#建立容器" class="headerlink" title="建立容器"></a>建立容器</h2><p>使用docker create創建容器，此時的容器狀態是stopped狀態，在使用docker start 啟動它。其實可直接使用docker run</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo docker run -i -t ubuntu /bin/bash</span><br><span class="line">//這樣會打開後直接執行 echo hello world並關掉容器</span><br><span class="line">sudo docker run -i -t ubuntu /bin/echo 'Hello World'</span><br></pre></td></tr></table></figure>
-<h2 id="取得映像檔"><a href="#取得映像檔" class="headerlink" title="取得映像檔"></a>取得映像檔</h2><p>可使用 docker pull 指令下載某個倉庫的映像檔，若沒有指定tag，則會預設使用 latest標籤（最新）</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// latest</span><br><span class="line">docker pull ubuntu</span><br><span class="line">// 14 version</span><br><span class="line">docker pull ubuntu:14.04</span><br></pre></td></tr></table></figure>
-<p>-i : 讓容器的標準保持打開<br>-t : 分配一個虛擬終端機綁到指定容易</p>
+        <h1>Docker － Container 篇</h1>
+<h2>container(容器）</h2>
+<p>其實就是image跑在記憶體中的樣子（實例），是一個輕量級的沙箱，彼此之間都是獨立的。</p>
+<h2>建立容器</h2>
+<p>使用docker create創建容器，此時的容器狀態是stopped狀態，在使用docker start 啟動它。其實可直接使用docker run</p>
+<p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo docker run -i -t ubuntu /bin/bash</span><br><span class="line">//這樣會打開後直接執行 echo hello world並關掉容器</span><br><span class="line">sudo docker run -i -t ubuntu /bin/echo 'Hello World'</span><br></pre></td></tr></table></figure></p>
+<h2>取得映像檔</h2>
+<p>可使用 docker pull 指令下載某個倉庫的映像檔，若沒有指定tag，則會預設使用 latest標籤（最新）</p>
+<p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// latest</span><br><span class="line">docker pull ubuntu</span><br><span class="line">// 14 version</span><br><span class="line">docker pull ubuntu:14.04</span><br></pre></td></tr></table></figure></p>
+<p>-i : 讓容器的標準保持打開
+-t : 分配一個虛擬終端機綁到指定容易</p>
 <p>基本上以後開docker就是加-t -i就對了顆顆</p>
-<h2 id="背景狀態執行"><a href="#背景狀態執行" class="headerlink" title="背景狀態執行"></a>背景狀態執行</h2><p>有時候只會希望docker run在背景，此時就可使用 -d</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d ubuntu /bin/sh -c "while true: do echo hello world; stop 1; done"</span><br></pre></td></tr></table></figure>
-<h2 id="停止容器"><a href="#停止容器" class="headerlink" title="停止容器"></a>停止容器</h2><p>如果要停止一個執行中的容器可使用docker stop</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker stop &lt;container ID&gt;</span><br></pre></td></tr></table></figure>
-<p>停止後使用docker ps -a -q可看到處於停止狀態的容器，處於停止狀態的容器可使用docker start來重啟。<br>docker restart可以將執行中容器關閉並重啟</p>
-<h2 id="進入容器"><a href="#進入容器" class="headerlink" title="進入容器"></a>進入容器</h2><p>如果使用-d讓docker在背景執行，但有時卻又需要透過指令操作可使用attach 來進入容器的command line</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker run -idt ubuntu</span><br><span class="line">docker attach &lt;name&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="刪除容器"><a href="#刪除容器" class="headerlink" title="刪除容器"></a>刪除容器</h2><p>如果要刪除不要的容器可使用docker rm</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rm &lt;Id&gt;</span><br></pre></td></tr></table></figure>
+<h2>背景狀態執行</h2>
+<p>有時候只會希望docker run在背景，此時就可使用 -d</p>
+<p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d ubuntu /bin/sh -c "while true: do echo hello world; stop 1; done"</span><br></pre></td></tr></table></figure></p>
+<h2>停止容器</h2>
+<p>如果要停止一個執行中的容器可使用docker stop</p>
+<p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker stop &lt;container ID&gt;</span><br></pre></td></tr></table></figure></p>
+<p>停止後使用docker ps -a -q可看到處於停止狀態的容器，處於停止狀態的容器可使用docker start來重啟。
+docker restart可以將執行中容器關閉並重啟</p>
+<h2>進入容器</h2>
+<p>如果使用-d讓docker在背景執行，但有時卻又需要透過指令操作可使用attach 來進入容器的command line</p>
+<p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker run -idt ubuntu</span><br><span class="line">docker attach &lt;name&gt;</span><br></pre></td></tr></table></figure></p>
+<h2>刪除容器</h2>
+<p>如果要刪除不要的容器可使用docker rm</p>
+<p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rm &lt;Id&gt;</span><br></pre></td></tr></table></figure></p>
 <p>記得要先將容器給終止(docker stop)，如果要直接刪除運作中容器可加上-f</p>
-<h2 id="匯入匯出容器"><a href="#匯入匯出容器" class="headerlink" title="匯入匯出容器"></a>匯入匯出容器</h2><p>可以將一個已建立的容器(不管是否運行狀態)，在本機上匯成一個檔案</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//先查看有哪些容器</span><br><span class="line">docker ps -a</span><br><span class="line">//匯出成10d2.tar</span><br><span class="line">docker export 102d &gt; 10d2.tar</span><br></pre></td></tr></table></figure>
+<h2>匯入匯出容器</h2>
+<p>可以將一個已建立的容器(不管是否運行狀態)，在本機上匯成一個檔案</p>
+<p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//先查看有哪些容器</span><br><span class="line">docker ps -a</span><br><span class="line">//匯出成10d2.tar</span><br><span class="line">docker export 102d &gt; 10d2.tar</span><br></pre></td></tr></table></figure></p>
 <p><img src="https://i.imgur.com/gnEWnk4.png" alt=""></p>
 <p>匯入的話則可使用docker import搭配bash 的cat + pipe（將結果丟到下一個指令），成為映像檔</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat 10d2.tar | docker import - 10d2.tar/ubunut</span><br></pre></td></tr></table></figure>
+<p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat 10d2.tar | docker import - 10d2.tar/ubunut</span><br></pre></td></tr></table></figure></p>
 
         
         <div id="comment-container">

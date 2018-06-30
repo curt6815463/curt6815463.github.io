@@ -5,14 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="寫過的叫足跡 想寫的是憧憬">
-    <meta name="keyword"  content="">
+
+    <meta name="author" content="Curt Liu">
+    <meta name="description" content="Curt => 技術 x 足跡，網頁前端部落格">
+    <meta name="keyword"  content="Curt => 技術 x 足跡，網頁前端部落格">
+    
     <link rel="shortcut icon" href="/img/favicon.ico">
 
 
     <meta itemprop="name" content="Curt => 技術 x 足跡">
     <meta itemprop="image" content="https://avatars0.githubusercontent.com/u/13904994?s=460&v=4">
-    <meta itemprop="description" content="網頁前端技術部落格">
+    <meta itemprop="description" content="Curt => 技術 x 足跡，網頁前端部落格">
     <meta name="google-site-verification" content="g4J2dF7TI9JMaBzZpVaIdg_Np2eGmpnIn9YQOO9qPgI" />
 
 
@@ -21,7 +24,7 @@
     <meta property="og:type" content="video.movie" />
     <meta property="og:url" content="https://dev-curt.me/" />
     <meta property="og:site_name" content="Curt => 技術 x 足跡">
-    <meta property="og:description" content="網頁前端技術部落格">
+    <meta property="og:description" content="Curt => 技術 x 足跡，網頁前端部落格">
     <meta property="og:locale" content="zh-tw">
     <meta property="og:image" content="http://avatars0.githubusercontent.com/u/13904994?s=460&v=4" />
     <title>
@@ -118,7 +121,7 @@
     </div>
     
         <div id="toc" class="toc-article">
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Mobile-端與-Window-端開發的差別"><span class="toc-text">Mobile 端與 Window 端開發的差別</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Web-In-App"><span class="toc-text">1. Web In App</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-事件處理"><span class="toc-text">2. 事件處理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-內容組織"><span class="toc-text">3. 內容組織</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-效能網路速度考量"><span class="toc-text">4. 效能網路速度考量</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-text">Mobile 端與 Window 端開發的差別</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">1. Web In App</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">2. 事件處理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">3. 內容組織</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">4. 效能網路速度考量</span></a></li></ol></li></ol>
 </div>
     
 </div>
@@ -170,17 +173,22 @@
 </span>
     </div>
     <div class="post-content ">
-        <h1 id="Mobile-端與-Window-端開發的差別"><a href="#Mobile-端與-Window-端開發的差別" class="headerlink" title="Mobile 端與 Window 端開發的差別"></a>Mobile 端與 Window 端開發的差別</h1><h2 id="1-Web-In-App"><a href="#1-Web-In-App" class="headerlink" title="1. Web In App"></a>1. Web In App</h2><ul>
+        <h1>Mobile 端與 Window 端開發的差別</h1>
+<h2>1. Web In App</h2>
+<ul>
 <li>Window 端：需考慮不同瀏覽器可能會有不同的使用效果，因為個別使用了不同的 Rendering Engine</li>
 <li>Mobile 端：除了不同瀏覽器之外，要注意網站開啟的方式是不是使用 WebView (Web In App)，WebView 根據 Rendering Engine 來打造的一個模擬瀏覽器環境，因此不能保證所有功能都有實作上去，最常見的就是從 Line 開網頁，網頁就壞了</li>
 </ul>
-<h2 id="2-事件處理"><a href="#2-事件處理" class="headerlink" title="2. 事件處理"></a>2. 事件處理</h2><ul>
+<h2>2. 事件處理</h2>
+<ul>
 <li>window 端：因為是滑鼠操作關係所以會用 hover 來控制事件發生後的反應</li>
 <li>Mobile 端：沒有滑鼠則是使用手指觸碰，因此需考慮 touch event</li>
 </ul>
-<h2 id="3-內容組織"><a href="#3-內容組織" class="headerlink" title="3. 內容組織"></a>3. 內容組織</h2><p>我們都知道手機與桌機一次能呈現的畫面大小不同，因此在設計內容及動線時，需考慮到客戶的使用情況，而非將頁面都塞得滿滿。</p>
+<h2>3. 內容組織</h2>
+<p>我們都知道手機與桌機一次能呈現的畫面大小不同，因此在設計內容及動線時，需考慮到客戶的使用情況，而非將頁面都塞得滿滿。</p>
 <p>通常桌機會以水平排列為主，手機端則會是垂直排列</p>
-<h2 id="4-效能網路速度考量"><a href="#4-效能網路速度考量" class="headerlink" title="4. 效能網路速度考量"></a>4. 效能網路速度考量</h2><p>手機端效能及網路速度差異較大，在設計mobile端時，考量到使用者等待資源載入及畫面反應時間，需做些效能優化或是移除非必要但負載較大的功能。</p>
+<h2>4. 效能網路速度考量</h2>
+<p>手機端效能及網路速度差異較大，在設計mobile端時，考量到使用者等待資源載入及畫面反應時間，需做些效能優化或是移除非必要但負載較大的功能。</p>
 
         
         <div id="comment-container">
