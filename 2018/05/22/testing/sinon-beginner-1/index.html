@@ -13,18 +13,18 @@
     <link rel="shortcut icon" href="/img/favicon.ico">
 
 
-    <meta name="description" content="Sinon.js 測試套件與測試替身（上）前言Sinon.js 是一套提供給JavaScipt使用的Testing Plugins，如果有先前有看過JavaScript 中的測試工具怎麼分類？文章，那你會大概瞭解測試套件在測試中扮演什麼角色 Test Doubles首先必須先知道 − Test Double (測試替身），它可以在測試中代替那些會造成我們不便的 funciton  Test Dou">
+    <meta name="description" content="Sinon.js 測試套件與測試替身（上） 前言 Sinon.js 是一套提供給JavaScipt使用的Testing Plugins，如果有先前有看過JavaScript 中的測試工具怎麼分類？文章，那你會大概瞭解測試套件在測試中扮演什麼角色 Test Doubles 首先必須先知道 − Test Double (測試替身），它可以在測試中代替那些會造成我們不便的 funciton  Test">
 <meta name="keywords" content="Testing">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Sinon.js 測試套件與測試替身（上）">
 <meta property="og:url" content="https://curt6815463.github.io/2018/05/22/testing/sinon-beginner-1/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Sinon.js 測試套件與測試替身（上）前言Sinon.js 是一套提供給JavaScipt使用的Testing Plugins，如果有先前有看過JavaScript 中的測試工具怎麼分類？文章，那你會大概瞭解測試套件在測試中扮演什麼角色 Test Doubles首先必須先知道 − Test Double (測試替身），它可以在測試中代替那些會造成我們不便的 funciton  Test Dou">
+<meta property="og:description" content="Sinon.js 測試套件與測試替身（上） 前言 Sinon.js 是一套提供給JavaScipt使用的Testing Plugins，如果有先前有看過JavaScript 中的測試工具怎麼分類？文章，那你會大概瞭解測試套件在測試中扮演什麼角色 Test Doubles 首先必須先知道 − Test Double (測試替身），它可以在測試中代替那些會造成我們不便的 funciton  Test">
 <meta property="og:locale" content="en">
 <meta property="og:updated_time" content="2018-06-02T08:34:53.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Sinon.js 測試套件與測試替身（上）">
-<meta name="twitter:description" content="Sinon.js 測試套件與測試替身（上）前言Sinon.js 是一套提供給JavaScipt使用的Testing Plugins，如果有先前有看過JavaScript 中的測試工具怎麼分類？文章，那你會大概瞭解測試套件在測試中扮演什麼角色 Test Doubles首先必須先知道 − Test Double (測試替身），它可以在測試中代替那些會造成我們不便的 funciton  Test Dou">
+<meta name="twitter:description" content="Sinon.js 測試套件與測試替身（上） 前言 Sinon.js 是一套提供給JavaScipt使用的Testing Plugins，如果有先前有看過JavaScript 中的測試工具怎麼分類？文章，那你會大概瞭解測試套件在測試中扮演什麼角色 Test Doubles 首先必須先知道 − Test Double (測試替身），它可以在測試中代替那些會造成我們不便的 funciton  Test">
 
     <title>
         
@@ -120,7 +120,7 @@
     </div>
     
         <div id="toc" class="toc-article">
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Sinon-js-測試套件與測試替身（上）"><span class="toc-text">Sinon.js 測試套件與測試替身（上）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Test-Doubles"><span class="toc-text">Test Doubles</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Test-Doubles-目的"><span class="toc-text">Test Doubles 目的</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#註"><span class="toc-text">註</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Test-Doubles種類"><span class="toc-text">Test Doubles種類</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Spy"><span class="toc-text">Spy</span></a></li></ol></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-text">Sinon.js 測試套件與測試替身（上）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">Test Doubles</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">Test Doubles 目的</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-text">註</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">Test Doubles種類</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">Spy</span></a></li></ol></li></ol></li></ol>
 </div>
     
 </div>
@@ -169,12 +169,17 @@
 </span>
     </div>
     <div class="post-content ">
-        <h1 id="Sinon-js-測試套件與測試替身（上）"><a href="#Sinon-js-測試套件與測試替身（上）" class="headerlink" title="Sinon.js 測試套件與測試替身（上）"></a>Sinon.js 測試套件與測試替身（上）</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Sinon.js 是一套提供給JavaScipt使用的Testing Plugins，如果有先前有看過JavaScript 中的測試工具怎麼分類？文章，那你會大概瞭解測試套件在測試中扮演什麼角色</p>
-<h2 id="Test-Doubles"><a href="#Test-Doubles" class="headerlink" title="Test Doubles"></a>Test Doubles</h2><p>首先必須先知道 − Test Double (測試替身），它可以在測試中代替那些會造成我們不便的 funciton</p>
+        <h1>Sinon.js 測試套件與測試替身（上）</h1>
+<h2>前言</h2>
+<p>Sinon.js 是一套提供給JavaScipt使用的Testing Plugins，如果有先前有看過JavaScript 中的測試工具怎麼分類？文章，那你會大概瞭解測試套件在測試中扮演什麼角色</p>
+<h2>Test Doubles</h2>
+<p>首先必須先知道 − Test Double (測試替身），它可以在測試中代替那些會造成我們不便的 funciton</p>
 <blockquote>
 <p>Test Double類似於電影中一些危險動作，導演們會請專業替身代替影星們去執行這些事情。</p>
 </blockquote>
-<h3 id="Test-Doubles-目的"><a href="#Test-Doubles-目的" class="headerlink" title="Test Doubles 目的"></a>Test Doubles 目的</h3><h4 id="註"><a href="#註" class="headerlink" title="註"></a>註</h4><ul>
+<h3>Test Doubles 目的</h3>
+<h4>註</h4>
+<ul>
 <li>SUT = System under test 你要測的東西</li>
 <li>DOC = Depended On Component SUT 所依賴的東西(function or package)</li>
 </ul>
@@ -189,7 +194,8 @@
 <ol start="3">
 <li>加速開發，不用等其他人</li>
 </ol>
-<h3 id="Test-Doubles種類"><a href="#Test-Doubles種類" class="headerlink" title="Test Doubles種類"></a>Test Doubles種類</h3><ol>
+<h3>Test Doubles種類</h3>
+<ol>
 <li>Spy</li>
 <li>Stub</li>
 <li>Mock</li>
@@ -197,11 +203,14 @@
 <li>Dummy</li>
 </ol>
 <p>Sinon.js提供 Spy, Stub, Mock, Fake四種實作方式，因此Dummy不另外介紹</p>
-<h3 id="Spy"><a href="#Spy" class="headerlink" title="Spy"></a>Spy</h3><p>spy是間諜的意思，如字面上它可以監測某個function，並取得她的資訊，像是：function被call了幾次、被call的時候帶了哪些參數、回傳值是什麼……等</p>
-<p>使用 sinon 的 anonymous function 示範<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> spy = sinon.spy()</span><br><span class="line">spy(<span class="string">'a'</span>,<span class="string">'b'</span>)</span><br><span class="line"><span class="built_in">console</span>.log(spy.firstCall.args) <span class="comment">//['a', 'b']</span></span><br></pre></td></tr></table></figure></p>
+<h3>Spy</h3>
+<p>spy是間諜的意思，如字面上它可以監測某個function，並取得她的資訊，像是：function被call了幾次、被call的時候帶了哪些參數、回傳值是什麼……等</p>
+<p>使用 sinon 的 anonymous function 示範
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> spy = sinon.spy()</span><br><span class="line">spy(<span class="string">'a'</span>,<span class="string">'b'</span>)</span><br><span class="line"><span class="built_in">console</span>.log(spy.firstCall.args) <span class="comment">//['a', 'b']</span></span><br></pre></td></tr></table></figure></p>
 <p>第四行看到使用<code>spy.firstCall.args</code>可取得function被呼叫時所帶入的參數</p>
 <p>接著換作一個已存在的函式 isExpire 作為範例</p>
-<p>註：isExpire用來判斷傳入的參數是否過期<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> product = &#123;</span><br><span class="line">    isExpire:<span class="function"><span class="keyword">function</span>(<span class="params">expireDate</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">let</span> now = (<span class="keyword">new</span> <span class="built_in">Date</span>()).getTime()</span><br><span class="line">        <span class="keyword">let</span> expire = <span class="built_in">Date</span>.parse(expireDate)</span><br><span class="line">        <span class="keyword">return</span> (now &gt; expire) ? <span class="literal">true</span> : <span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> spy = sinon.spy(product,<span class="string">'isExpire'</span>)</span><br><span class="line">product.isExpire(<span class="string">'1995/2/3'</span>)</span><br><span class="line"><span class="built_in">console</span>.log(spy.calledOnce) <span class="comment">//結果為1</span></span><br></pre></td></tr></table></figure></p>
+<p>註：isExpire用來判斷傳入的參數是否過期
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> product = &#123;</span><br><span class="line">    isExpire:<span class="function"><span class="keyword">function</span>(<span class="params">expireDate</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">let</span> now = (<span class="keyword">new</span> <span class="built_in">Date</span>()).getTime()</span><br><span class="line">        <span class="keyword">let</span> expire = <span class="built_in">Date</span>.parse(expireDate)</span><br><span class="line">        <span class="keyword">return</span> (now &gt; expire) ? <span class="literal">true</span> : <span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> spy = sinon.spy(product,<span class="string">'isExpire'</span>)</span><br><span class="line">product.isExpire(<span class="string">'1995/2/3'</span>)</span><br><span class="line"><span class="built_in">console</span>.log(spy.calledOnce) <span class="comment">//結果為1</span></span><br></pre></td></tr></table></figure></p>
 <p>11行指定要 spy product 上的 isExpire function，在確認其呼叫次數為1</p>
 
         
