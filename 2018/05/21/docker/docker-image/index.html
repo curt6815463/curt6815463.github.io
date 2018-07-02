@@ -13,20 +13,20 @@
     <link rel="shortcut icon" href="/img/favicon.ico">
 
 
-    <meta name="description" content="Docker－Image篇 image（映像檔） docker 的唯獨模板，例如：一個映像檔可以包涵完整的 ubuntu系統，就叫他 ubuntu映像檔，當然這個映像檔也可以裝上 apache，以及其他東西，就被稱作ＸＸＸ映像檔。 取得映像檔 可使用 docker pull 指令下載某個倉庫的映像檔，若沒有指定tag，則會預設使用 latest標籤（最新） 1234// latestdocker">
+    <meta name="description" content="Docker－Image篇image（映像檔）docker 的唯獨模板，例如：一個映像檔可以包涵完整的 ubuntu系統，就叫他 ubuntu映像檔，當然這個映像檔也可以裝上 apache，以及其他東西，就被稱作ＸＸＸ映像檔。 取得映像檔可使用 docker pull 指令下載某個倉庫的映像檔，若沒有指定tag，則會預設使用 latest標籤（最新） 1234// latestdocker pul">
 <meta name="keywords" content="Docker">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Docker － Image 篇">
 <meta property="og:url" content="https://curt6815463.github.io/2018/05/21/docker/docker-image/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Docker－Image篇 image（映像檔） docker 的唯獨模板，例如：一個映像檔可以包涵完整的 ubuntu系統，就叫他 ubuntu映像檔，當然這個映像檔也可以裝上 apache，以及其他東西，就被稱作ＸＸＸ映像檔。 取得映像檔 可使用 docker pull 指令下載某個倉庫的映像檔，若沒有指定tag，則會預設使用 latest標籤（最新） 1234// latestdocker">
+<meta property="og:description" content="Docker－Image篇image（映像檔）docker 的唯獨模板，例如：一個映像檔可以包涵完整的 ubuntu系統，就叫他 ubuntu映像檔，當然這個映像檔也可以裝上 apache，以及其他東西，就被稱作ＸＸＸ映像檔。 取得映像檔可使用 docker pull 指令下載某個倉庫的映像檔，若沒有指定tag，則會預設使用 latest標籤（最新） 1234// latestdocker pul">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://i.imgur.com/usGN02N.png">
 <meta property="og:image" content="https://i.imgur.com/LtVv2RY.png">
 <meta property="og:updated_time" content="2018-06-15T04:11:24.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Docker － Image 篇">
-<meta name="twitter:description" content="Docker－Image篇 image（映像檔） docker 的唯獨模板，例如：一個映像檔可以包涵完整的 ubuntu系統，就叫他 ubuntu映像檔，當然這個映像檔也可以裝上 apache，以及其他東西，就被稱作ＸＸＸ映像檔。 取得映像檔 可使用 docker pull 指令下載某個倉庫的映像檔，若沒有指定tag，則會預設使用 latest標籤（最新） 1234// latestdocker">
+<meta name="twitter:description" content="Docker－Image篇image（映像檔）docker 的唯獨模板，例如：一個映像檔可以包涵完整的 ubuntu系統，就叫他 ubuntu映像檔，當然這個映像檔也可以裝上 apache，以及其他東西，就被稱作ＸＸＸ映像檔。 取得映像檔可使用 docker pull 指令下載某個倉庫的映像檔，若沒有指定tag，則會預設使用 latest標籤（最新） 1234// latestdocker pul">
 <meta name="twitter:image" content="https://i.imgur.com/usGN02N.png">
 
     <title>
@@ -123,7 +123,7 @@
     </div>
     
         <div id="toc" class="toc-article">
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-text">Docker－Image篇</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">image（映像檔）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">取得映像檔</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">查看映像檔</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">搜尋映像檔</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">刪除映像檔</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">建立映像檔</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">儲存和載入映像檔</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">上傳映像檔</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Docker－Image篇"><span class="toc-text">Docker－Image篇</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#image（映像檔）"><span class="toc-text">image（映像檔）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#取得映像檔"><span class="toc-text">取得映像檔</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查看映像檔"><span class="toc-text">查看映像檔</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#搜尋映像檔"><span class="toc-text">搜尋映像檔</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#刪除映像檔"><span class="toc-text">刪除映像檔</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#建立映像檔"><span class="toc-text">建立映像檔</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#儲存和載入映像檔"><span class="toc-text">儲存和載入映像檔</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#上傳映像檔"><span class="toc-text">上傳映像檔</span></a></li></ol></li></ol>
 </div>
     
 </div>
@@ -172,41 +172,34 @@
 </span>
     </div>
     <div class="post-content ">
-        <h1>Docker－Image篇</h1>
-<h2>image（映像檔）</h2>
-<p>docker 的唯獨模板，例如：一個映像檔可以包涵完整的 ubuntu系統，就叫他 ubuntu映像檔，當然這個映像檔也可以裝上 apache，以及其他東西，就被稱作ＸＸＸ映像檔。</p>
-<h2>取得映像檔</h2>
-<p>可使用 docker pull 指令下載某個倉庫的映像檔，若沒有指定tag，則會預設使用 latest標籤（最新）</p>
-<p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// latest</span><br><span class="line">docker pull ubuntu</span><br><span class="line">// 14 version</span><br><span class="line">docker pull ubuntu:14.04</span><br></pre></td></tr></table></figure></p>
+        <h1 id="Docker－Image篇"><a href="#Docker－Image篇" class="headerlink" title="Docker－Image篇"></a>Docker－Image篇</h1><h2 id="image（映像檔）"><a href="#image（映像檔）" class="headerlink" title="image（映像檔）"></a>image（映像檔）</h2><p>docker 的唯獨模板，例如：一個映像檔可以包涵完整的 ubuntu系統，就叫他 ubuntu映像檔，當然這個映像檔也可以裝上 apache，以及其他東西，就被稱作ＸＸＸ映像檔。</p>
+<h2 id="取得映像檔"><a href="#取得映像檔" class="headerlink" title="取得映像檔"></a>取得映像檔</h2><p>可使用 docker pull 指令下載某個倉庫的映像檔，若沒有指定tag，則會預設使用 latest標籤（最新）</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// latest</span><br><span class="line">docker pull ubuntu</span><br><span class="line">// 14 version</span><br><span class="line">docker pull ubuntu:14.04</span><br></pre></td></tr></table></figure>
 <p>事實上都是從預設的註冊伺服器下載（docker hub），相當於</p>
-<p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull registry.hub.docker.com/ubuntu:XXX</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull registry.hub.docker.com/ubuntu:XXX</span><br></pre></td></tr></table></figure>
 <p>當然也可以從其他register抓取資源，像是docker pool。</p>
-<p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull dl.dockerpool.com:5000/ubuntu</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull dl.dockerpool.com:5000/ubuntu</span><br></pre></td></tr></table></figure>
 <p>下載好後即可利用這個image 建出container(實例），並且執行bash</p>
-<p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -t -i ubuntu /bin/bash</span><br></pre></td></tr></table></figure></p>
-<h2>查看映像檔</h2>
-<p>使用 <code>docker images</code> 查看本機上已存在的映像檔</p>
-<p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker images</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -t -i ubuntu /bin/bash</span><br></pre></td></tr></table></figure>
+<h2 id="查看映像檔"><a href="#查看映像檔" class="headerlink" title="查看映像檔"></a>查看映像檔</h2><p>使用 <code>docker images</code> 查看本機上已存在的映像檔</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker images</span><br></pre></td></tr></table></figure>
 <p><img src="https://i.imgur.com/usGN02N.png" alt=""></p>
 <p>TAG 資訊用於標記來自同一個倉庫（ubuntu) 不同的映像檔， docker tag 則可為本機上映像檔添增新標籤 (repository欄位名稱），這兩者不一樣。</p>
 <p>docker tag 產生的新映像檔實際上指向了同一個映像檔，所以他們 IMAGE ID 相同</p>
-<p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker tag ubuntu:latest xxxx</span><br><span class="line">docker tag &lt;ID&gt; xxxx</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker tag ubuntu:latest xxxx</span><br><span class="line">docker tag &lt;ID&gt; xxxx</span><br></pre></td></tr></table></figure>
 <p><img src="https://i.imgur.com/LtVv2RY.png" alt=""></p>
 <p>若要查看映像檔詳細資訊可使用</p>
-<p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker inspect &lt;ID&gt;</span><br><span class="line">//可使用-f查詢特定參數</span><br><span class="line">docker inspect -f &#123;&#123;".Architecture"&#125;&#125; &lt;ID&gt;</span><br></pre></td></tr></table></figure></p>
-<h2>搜尋映像檔</h2>
-<p>使用 docker search &lt;key term&gt; 搜尋遠端倉庫中的映像檔，預設搜尋 Docker Hub</p>
-<p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker search mysql</span><br></pre></td></tr></table></figure></p>
-<h2>刪除映像檔</h2>
-<p>使用 docker rmi &lt;ID or tag&gt; 刪除映像檔</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker inspect &lt;ID&gt;</span><br><span class="line">//可使用-f查詢特定參數</span><br><span class="line">docker inspect -f &#123;&#123;".Architecture"&#125;&#125; &lt;ID&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="搜尋映像檔"><a href="#搜尋映像檔" class="headerlink" title="搜尋映像檔"></a>搜尋映像檔</h2><p>使用 docker search <key term=""> 搜尋遠端倉庫中的映像檔，預設搜尋 Docker Hub</key></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker search mysql</span><br></pre></td></tr></table></figure>
+<h2 id="刪除映像檔"><a href="#刪除映像檔" class="headerlink" title="刪除映像檔"></a>刪除映像檔</h2><p>使用 docker rmi <id or="" tag=""> 刪除映像檔</id></p>
 <p>使用 tag 刪除: 假設有多個 Tag 指向同個 ID，則刪除某個 image（使用 docker images 看到的 image) 時不會真的刪掉真實的 image，只是刪除他的標籤。如果最後只剩一個，則真實 image就會被刪除。</p>
 <p>使用 ID 刪除:如果有多個 tag 指到同個 ID (使用 docker tag)，則無法刪除必須使用 tag，它不會讓你直接刪除真實 image，除非只剩一個 tag 指到 image ID</p>
-<h2>建立映像檔</h2>
-<ul>
+<h2 id="建立映像檔"><a href="#建立映像檔" class="headerlink" title="建立映像檔"></a>建立映像檔</h2><ul>
 <li>基於現有映像檔的容器建立</li>
 </ul>
 <p>啟動一個本來就有的映像檔，然後在上面進行修改並新增一個檔後退出</p>
-<p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">docker run -ti ubuntu /bin/bash</span><br><span class="line">docker commit -m "xxxxx" -a "xxxx" &lt;container ID&gt; &lt;tag Name&gt;</span><br><span class="line">ex:</span><br><span class="line">docker commit -m "added a new file" -a "docker newbee" a925cb40b3fo test</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">docker run -ti ubuntu /bin/bash</span><br><span class="line">docker commit -m "xxxxx" -a "xxxx" &lt;container ID&gt; &lt;tag Name&gt;</span><br><span class="line">ex:</span><br><span class="line">docker commit -m "added a new file" -a "docker newbee" a925cb40b3fo test</span><br></pre></td></tr></table></figure>
 <p>此時使用docker images就會發現有新的image</p>
 <ul>
 <li>基於Linux 容器（LXC）範例匯入</li>
@@ -216,16 +209,13 @@
 <li>Dockerfile</li>
 </ul>
 <p>有空補上</p>
-<h2>儲存和載入映像檔</h2>
-<p>如果要將image存成壓縮檔可使用docker save</p>
-<p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker save -o ubuntu_latest.tar ubuntu</span><br><span class="line">//這比較常見</span><br><span class="line">docker save ubuntu &gt; xxx.tar</span><br></pre></td></tr></table></figure></p>
+<h2 id="儲存和載入映像檔"><a href="#儲存和載入映像檔" class="headerlink" title="儲存和載入映像檔"></a>儲存和載入映像檔</h2><p>如果要將image存成壓縮檔可使用docker save</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker save -o ubuntu_latest.tar ubuntu</span><br><span class="line">//這比較常見</span><br><span class="line">docker save ubuntu &gt; xxx.tar</span><br></pre></td></tr></table></figure>
 <p>反之則可使用docker load把壓縮檔載入本機映像檔</p>
-<p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker load &lt; xxx.tar</span><br></pre></td></tr></table></figure></p>
-<h2>上傳映像檔</h2>
-<p>首先，你必須先去 Docker Hub 辦帳號，並且創一個 repo 取名為 uploadtest (隨意)，接著可以使用 docker push 上傳(根本就 github)。</p>
-<p>以下需注意，假設 tag 為 ubuntu，則需要先用 docker tag 將其新增一個 tag，名稱必須是 Docker Hub ID/Docker hub上 repo
-name，在使用push就可直接推到遠端。記得要先用docker login登入，不然就耍智障了</p>
-<p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1. docker login</span><br><span class="line">//curt6815463是我docker hub上ID, uploadtest是我在上面創的repo名字</span><br><span class="line">2. docker tag ubuntu curt6815463/uploadtest</span><br><span class="line">3. docker push curt6815463/uploadtest</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker load &lt; xxx.tar</span><br></pre></td></tr></table></figure>
+<h2 id="上傳映像檔"><a href="#上傳映像檔" class="headerlink" title="上傳映像檔"></a>上傳映像檔</h2><p>首先，你必須先去 Docker Hub 辦帳號，並且創一個 repo 取名為 uploadtest (隨意)，接著可以使用 docker push 上傳(根本就 github)。</p>
+<p>以下需注意，假設 tag 為 ubuntu，則需要先用 docker tag 將其新增一個 tag，名稱必須是 Docker Hub ID/Docker hub上 repo<br>name，在使用push就可直接推到遠端。記得要先用docker login登入，不然就耍智障了</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1. docker login</span><br><span class="line">//curt6815463是我docker hub上ID, uploadtest是我在上面創的repo名字</span><br><span class="line">2. docker tag ubuntu curt6815463/uploadtest</span><br><span class="line">3. docker push curt6815463/uploadtest</span><br></pre></td></tr></table></figure>
 
         
         <div id="comment-container">

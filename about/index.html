@@ -13,13 +13,13 @@
     <link rel="shortcut icon" href="/img/favicon.ico">
 
 
-    <meta name="description" content="Self Introduction Hi!! 我是 Curt，熱愛研究新技術 目前是 Web Front-End Developer (網頁前端工程師) 並在 好想工作室 做為 Freelancer 接案 Skill  HTML/CSS 切版，並根據需求製作 RWD 版型 使用 ES6 語法，瞭解原生 Js、Jquery 與前端 Framework 的差異 Vue.js 串接網頁 UI 邏輯，熟悉">
+    <meta name="description" content="Self IntroductionHi!! 我是 Curt，熱愛研究新技術目前是 Web Front-End Developer (網頁前端工程師)並在 好想工作室 做為 Freelancer 接案 Skill HTML/CSS 切版，並根據需求製作 RWD 版型 使用 ES6 語法，瞭解原生 Js、Jquery 與前端 Framework 的差異 Vue.js 串接網頁 UI 邏輯，熟悉 Vue">
 <meta name="keywords" content="Curt 技術">
 <meta property="og:type" content="website">
 <meta property="og:title" content="About">
 <meta property="og:url" content="https://curt6815463.github.io/about/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Self Introduction Hi!! 我是 Curt，熱愛研究新技術 目前是 Web Front-End Developer (網頁前端工程師) 並在 好想工作室 做為 Freelancer 接案 Skill  HTML/CSS 切版，並根據需求製作 RWD 版型 使用 ES6 語法，瞭解原生 Js、Jquery 與前端 Framework 的差異 Vue.js 串接網頁 UI 邏輯，熟悉">
+<meta property="og:description" content="Self IntroductionHi!! 我是 Curt，熱愛研究新技術目前是 Web Front-End Developer (網頁前端工程師)並在 好想工作室 做為 Freelancer 接案 Skill HTML/CSS 切版，並根據需求製作 RWD 版型 使用 ES6 語法，瞭解原生 Js、Jquery 與前端 Framework 的差異 Vue.js 串接網頁 UI 邏輯，熟悉 Vue">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://curt6815463.github.io/static/arrow_right.png">
 <meta property="og:image" content="https://i.imgur.com/TAsmVWx.png">
@@ -37,10 +37,10 @@
 <meta property="og:image" content="https://curt6815463.github.io/static/arrow_right.png">
 <meta property="og:image" content="https://i.imgur.com/74ccLBu.png">
 <meta property="og:image" content="https://i.imgur.com/4bC20Up.png">
-<meta property="og:updated_time" content="2018-07-01T18:02:55.000Z">
+<meta property="og:updated_time" content="2018-07-02T02:05:59.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="About">
-<meta name="twitter:description" content="Self Introduction Hi!! 我是 Curt，熱愛研究新技術 目前是 Web Front-End Developer (網頁前端工程師) 並在 好想工作室 做為 Freelancer 接案 Skill  HTML/CSS 切版，並根據需求製作 RWD 版型 使用 ES6 語法，瞭解原生 Js、Jquery 與前端 Framework 的差異 Vue.js 串接網頁 UI 邏輯，熟悉">
+<meta name="twitter:description" content="Self IntroductionHi!! 我是 Curt，熱愛研究新技術目前是 Web Front-End Developer (網頁前端工程師)並在 好想工作室 做為 Freelancer 接案 Skill HTML/CSS 切版，並根據需求製作 RWD 版型 使用 ES6 語法，瞭解原生 Js、Jquery 與前端 Framework 的差異 Vue.js 串接網頁 UI 邏輯，熟悉 Vue">
 <meta name="twitter:image" content="https://curt6815463.github.io/static/arrow_right.png">
 
     <title>
@@ -159,17 +159,75 @@
     
     <div class="index-middle">
         <!-- Main Content -->
-        
+        <style>
+.post-content {
+  padding-top: 3em;
+}
+.project{
+  max-height: 65px;
+  overflow: hidden;
+  transition: max-height 1s;
+}
+.project-open-opacity{
+  opacity: 0;
+  transition: opacity 1s;
+}
+.open-opacity{
+  opacity: 1 !important;
+}
+.project-open{
+  max-height: 3000px !important;
+}
+.project-title{
+  cursor: pointer;
+  color: #3d3d3d;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid #eee;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.project-title:hover{
+  color: #979797;
+}
+.arrow{
+  width: 1em;
+  vertical-align: middle;
+  transform: rotate(0deg);
+  transition: transform 0.5s;
+}
+.arrow-rotate{
+  transform: rotate(90deg);
+}
+
+.project-introduction-title{
+  color: #3d3d3d;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.project-introduction-content{
+  color: #4a4a4a;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 1px;
+
+}
+.project-img{
+  max-width: 100%;
+}
+
+</style>
+
+
 <div class="post-content ">
-    <h1>Self Introduction</h1>
-<p>Hi!! 我是 Curt，熱愛研究新技術
-目前是 Web Front-End Developer (網頁前端工程師)
-並在 <a href="https://www.facebook.com/GoodideasStudio/" target="_blank" rel="noopener">好想工作室</a> 做為 Freelancer 接案</p>
-<h1>Skill</h1>
-<ul>
+    <h1 id="Self-Introduction"><a href="#Self-Introduction" class="headerlink" title="Self Introduction"></a>Self Introduction</h1><p>Hi!! 我是 Curt，熱愛研究新技術<br>目前是 Web Front-End Developer (網頁前端工程師)<br>並在 <a href="https://www.facebook.com/GoodideasStudio/" target="_blank" rel="noopener">好想工作室</a> 做為 Freelancer 接案</p>
+<h1 id="Skill"><a href="#Skill" class="headerlink" title="Skill"></a>Skill</h1><ul>
 <li>HTML/CSS 切版，並根據需求製作 RWD 版型</li>
 <li>使用 ES6 語法，瞭解原生 Js、Jquery 與前端 Framework 的差異</li>
-<li>Vue.js 串接網頁 UI 邏輯，熟悉 Vue 生態圈 (vuex, vue-router, vue-cli......)</li>
+<li>Vue.js 串接網頁 UI 邏輯，熟悉 Vue 生態圈 (vuex, vue-router, vue-cli……)</li>
 <li>瞭解 Webpack 基本原理，能改動相關 loader</li>
 <li>使用 Git 與多人協作，並能負責 integrate 專案</li>
 <li>遠端 repo 搭配 Jenkins 進行自動化部署</li>
@@ -177,8 +235,7 @@
 <li>Node.js 圖像處理 Api</li>
 <li>具有敏捷開發專案經驗，瞭解測試驅動開發（TDD）方法</li>
 </ul>
-<h1>Project</h1>
-<p>
+<h1 id="Project"><a href="#Project" class="headerlink" title="Project"></a>Project</h1>
 <div class="project">
   <div class="project-title">
     <span>
@@ -233,8 +290,8 @@
   </div>
 
 </div>
-</p>
-<p>
+
+
 <div class="project">
   <div class="project-title">
     <span>
@@ -278,8 +335,8 @@
   </div>
 
 </div>
-</p>
-<p>
+
+
 <div class="project">
   <div class="project-title">
     <span>
@@ -314,8 +371,8 @@
   </div>
 
 </div>
-</p>
-<p>
+
+
 <div class="project">
   <div class="project-title">
     <span>
@@ -358,8 +415,8 @@
   </div>
 
 </div>
-</p>
-<p>
+
+
 <div class="project">
   <div class="project-title">
     <span>
@@ -397,71 +454,8 @@
   </div>
 
 </div>
-</p>
-<h1>Contact</h1>
-<p>Email: curt6815463@gmail.com
-GitHub: https://github.com/curt6815463
-Twitter: https://twitter.com/LiuCurt?lang=zh-tw
-Linkedin: https://www.linkedin.com/in/curt-liu-549525149/
-Facebook: https://www.facebook.com/profile.php?id=100002203974206</p>
-<p>&lt;style&gt;
-.post-content {
-padding-top: 3em;
-}
-.project{
-max-height: 65px;
-overflow: hidden;
-transition: max-height 1s;
-}
-.project-open-opacity{
-opacity: 0;
-transition: opacity 1s;<br>
-}
-.open-opacity{
-opacity: 1 !important;
-}
-.project-open{
-max-height: 3000px !important;<br>
-}
-.project-title{
-cursor: pointer;
-color: #3d3d3d;
-margin-top: 20px;
-margin-bottom: 20px;
-padding-bottom: 0.3em;
-border-bottom: 1px solid #eee;
-font-size: 1.4rem;
-font-weight: bold;
-}
-.project-title:hover{
-color: #979797;
-}
-.arrow{
-width: 1em;
-vertical-align: middle;
-transform: rotate(0deg);
-transition: transform 0.5s;
-}
-.arrow-rotate{
-transform: rotate(90deg);
-}</p>
-<p>.project-introduction-title{
-color: #3d3d3d;
-margin-top: 20px;
-margin-bottom: 20px;
-font-size: 1.1rem;
-font-weight: bold;
-}
-.project-introduction-content{
-color: #4a4a4a;
-font-size: 16px;
-line-height: 30px;
-letter-spacing: 1px;</p>
-<p>}
-.project-img{
-max-width: 100%;
-}
-&lt;/style&gt;</p>
+
+<h1 id="Contact"><a href="#Contact" class="headerlink" title="Contact"></a>Contact</h1><p>Email: <a href="mailto:curt6815463@gmail.com" target="_blank" rel="noopener">curt6815463@gmail.com</a><br>GitHub: <a href="https://github.com/curt6815463" target="_blank" rel="noopener">https://github.com/curt6815463</a><br>Twitter: <a href="https://twitter.com/LiuCurt?lang=zh-tw" target="_blank" rel="noopener">https://twitter.com/LiuCurt?lang=zh-tw</a><br>Linkedin: <a href="https://www.linkedin.com/in/curt-liu-549525149/" target="_blank" rel="noopener">https://www.linkedin.com/in/curt-liu-549525149/</a><br>Facebook: <a href="https://www.facebook.com/profile.php?id=100002203974206" target="_blank" rel="noopener">https://www.facebook.com/profile.php?id=100002203974206</a></p>
 
     
     <div id="comment-container">

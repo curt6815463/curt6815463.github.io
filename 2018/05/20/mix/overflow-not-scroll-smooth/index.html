@@ -13,18 +13,18 @@
     <link rel="shortcut icon" href="/img/favicon.ico">
 
 
-    <meta name="description" content="overflow: scroll 時不能平滑滾動的問題怎麽處理？ 情境  在div設定 overflow:scroll後，從IOS手機打開瀏覽器會發現，滾動畫面的時候很卡，手一離開畫面就立即停止繼續滑動  解法 使用 1-webkit-overflow-scrolling: touch; 這行會讓IOS啟動硬件加速，因此可解決卡頓的問題 不過這也是WebKit 108400版本左右才支持 因此iO">
+    <meta name="description" content="overflow: scroll 時不能平滑滾動的問題怎麽處理？情境 在div設定 overflow:scroll後，從IOS手機打開瀏覽器會發現，滾動畫面的時候很卡，手一離開畫面就立即停止繼續滑動  解法使用1-webkit-overflow-scrolling: touch; 這行會讓IOS啟動硬件加速，因此可解決卡頓的問題不過這也是WebKit 108400版本左右才支持因此iOS Safa">
 <meta name="keywords" content="CSS,JS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="設定overflow後scroll時，不能平滑滾動的問題怎麽處理？">
 <meta property="og:url" content="https://curt6815463.github.io/2018/05/20/mix/overflow-not-scroll-smooth/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="overflow: scroll 時不能平滑滾動的問題怎麽處理？ 情境  在div設定 overflow:scroll後，從IOS手機打開瀏覽器會發現，滾動畫面的時候很卡，手一離開畫面就立即停止繼續滑動  解法 使用 1-webkit-overflow-scrolling: touch; 這行會讓IOS啟動硬件加速，因此可解決卡頓的問題 不過這也是WebKit 108400版本左右才支持 因此iO">
+<meta property="og:description" content="overflow: scroll 時不能平滑滾動的問題怎麽處理？情境 在div設定 overflow:scroll後，從IOS手機打開瀏覽器會發現，滾動畫面的時候很卡，手一離開畫面就立即停止繼續滑動  解法使用1-webkit-overflow-scrolling: touch; 這行會讓IOS啟動硬件加速，因此可解決卡頓的問題不過這也是WebKit 108400版本左右才支持因此iOS Safa">
 <meta property="og:locale" content="en">
 <meta property="og:updated_time" content="2018-05-20T06:58:43.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="設定overflow後scroll時，不能平滑滾動的問題怎麽處理？">
-<meta name="twitter:description" content="overflow: scroll 時不能平滑滾動的問題怎麽處理？ 情境  在div設定 overflow:scroll後，從IOS手機打開瀏覽器會發現，滾動畫面的時候很卡，手一離開畫面就立即停止繼續滑動  解法 使用 1-webkit-overflow-scrolling: touch; 這行會讓IOS啟動硬件加速，因此可解決卡頓的問題 不過這也是WebKit 108400版本左右才支持 因此iO">
+<meta name="twitter:description" content="overflow: scroll 時不能平滑滾動的問題怎麽處理？情境 在div設定 overflow:scroll後，從IOS手機打開瀏覽器會發現，滾動畫面的時候很卡，手一離開畫面就立即停止繼續滑動  解法使用1-webkit-overflow-scrolling: touch; 這行會讓IOS啟動硬件加速，因此可解決卡頓的問題不過這也是WebKit 108400版本左右才支持因此iOS Safa">
 
     <title>
         
@@ -120,7 +120,7 @@
     </div>
     
         <div id="toc" class="toc-article">
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-text">overflow: scroll 時不能平滑滾動的問題怎麽處理？</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">情境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">解法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">探討前綴字元</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-text">首先要知道不同的瀏覽器，會使用不同的引擎去實作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-text">因此在某些情況，瀏覽器會選擇使用前綴字眼表示某些CSS</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-text">EX:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-text">前綴字眼</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">談談Web open in mobile app</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">Webview (In App Web)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">回到源頭：萬一這些In app web沒有實作這些CSS？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">touch event</span></a></li></ol></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#overflow-scroll-時不能平滑滾動的問題怎麽處理？"><span class="toc-text">overflow: scroll 時不能平滑滾動的問題怎麽處理？</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#情境"><span class="toc-text">情境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解法"><span class="toc-text">解法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#探討前綴字元"><span class="toc-text">探討前綴字元</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#首先要知道不同的瀏覽器，會使用不同的引擎去實作"><span class="toc-text">首先要知道不同的瀏覽器，會使用不同的引擎去實作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#因此在某些情況，瀏覽器會選擇使用前綴字眼表示某些CSS"><span class="toc-text">因此在某些情況，瀏覽器會選擇使用前綴字眼表示某些CSS</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#EX"><span class="toc-text">EX:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#前綴字眼"><span class="toc-text">前綴字眼</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#談談Web-open-in-mobile-app"><span class="toc-text">談談Web open in mobile app</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Webview-In-App-Web"><span class="toc-text">Webview (In App Web)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#回到源頭：萬一這些In-app-web沒有實作這些CSS？"><span class="toc-text">回到源頭：萬一這些In app web沒有實作這些CSS？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#touch-event"><span class="toc-text">touch event</span></a></li></ol></li></ol></li></ol>
 </div>
     
 </div>
@@ -172,29 +172,17 @@
 </span>
     </div>
     <div class="post-content ">
-        <h1>overflow: scroll 時不能平滑滾動的問題怎麽處理？</h1>
-<h2>情境</h2>
-<blockquote>
+        <h1 id="overflow-scroll-時不能平滑滾動的問題怎麽處理？"><a href="#overflow-scroll-時不能平滑滾動的問題怎麽處理？" class="headerlink" title="overflow: scroll 時不能平滑滾動的問題怎麽處理？"></a>overflow: scroll 時不能平滑滾動的問題怎麽處理？</h1><h2 id="情境"><a href="#情境" class="headerlink" title="情境"></a>情境</h2><blockquote>
 <p>在div設定 overflow:scroll後，從IOS手機打開瀏覽器會發現，滾動畫面的時候很卡，手一離開畫面就立即停止繼續滑動</p>
 </blockquote>
-<h2>解法</h2>
-<p>使用
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">-webkit-overflow-scrolling</span>: <span class="selector-tag">touch</span>;</span><br></pre></td></tr></table></figure></p>
-<p>這行會讓IOS啟動硬件加速，因此可解決卡頓的問題
-不過這也是WebKit 108400版本左右才支持
-因此iOS Safari需要5.0以上，Android4.0以上才有效</p>
-<h2>探討前綴字元</h2>
-<h4>首先要知道不同的瀏覽器，會使用不同的引擎去實作</h4>
-<ul>
+<h2 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h2><p>使用<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">-webkit-overflow-scrolling</span>: <span class="selector-tag">touch</span>;</span><br></pre></td></tr></table></figure></p>
+<p>這行會讓IOS啟動硬件加速，因此可解決卡頓的問題<br>不過這也是WebKit 108400版本左右才支持<br>因此iOS Safari需要5.0以上，Android4.0以上才有效</p>
+<h2 id="探討前綴字元"><a href="#探討前綴字元" class="headerlink" title="探討前綴字元"></a>探討前綴字元</h2><h4 id="首先要知道不同的瀏覽器，會使用不同的引擎去實作"><a href="#首先要知道不同的瀏覽器，會使用不同的引擎去實作" class="headerlink" title="首先要知道不同的瀏覽器，會使用不同的引擎去實作"></a>首先要知道不同的瀏覽器，會使用不同的引擎去實作</h4><ul>
 <li>OperaGoogle、Safari：Webkit</li>
 <li>Firefox：Gecko</li>
 </ul>
-<p>註：
-Opera以前是Presto後來改為Webkit
-Firefox在mobile中也有部分使用Webkit實作</p>
-<h4>因此在某些情況，瀏覽器會選擇使用前綴字眼表示某些CSS</h4>
-<h4>EX:</h4>
-<ol>
+<p>註：<br>Opera以前是Presto後來改為Webkit<br>Firefox在mobile中也有部分使用Webkit實作</p>
+<h4 id="因此在某些情況，瀏覽器會選擇使用前綴字眼表示某些CSS"><a href="#因此在某些情況，瀏覽器會選擇使用前綴字眼表示某些CSS" class="headerlink" title="因此在某些情況，瀏覽器會選擇使用前綴字眼表示某些CSS"></a>因此在某些情況，瀏覽器會選擇使用前綴字眼表示某些CSS</h4><h4 id="EX"><a href="#EX" class="headerlink" title="EX:"></a>EX:</h4><ol>
 <li>試驗一些還未成為標準的的CSS屬性——也許永遠不會成為標準</li>
 <li>對新出現的標準的CSS3屬性特徵做實驗性的實現</li>
 <li>對CSS3中一些新屬性做等效語義的個性實現</li>
@@ -202,32 +190,26 @@ Firefox在mobile中也有部分使用Webkit實作</p>
 <blockquote>
 <p>主要就是讓瀏覽器來測試或試驗新的CSS標準</p>
 </blockquote>
-<h4>前綴字眼</h4>
-<ol>
+<h4 id="前綴字眼"><a href="#前綴字眼" class="headerlink" title="前綴字眼"></a>前綴字眼</h4><ol>
 <li>-ms-：Trident（IE）</li>
 <li>-moz-：Gecko(Firefox)</li>
 <li>-o-：Presto(Opera)</li>
 <li>-webkit-：Webkit(Chrome、Safari)</li>
 </ol>
-<h2>談談Web open in mobile app</h2>
-<blockquote>
+<h2 id="談談Web-open-in-mobile-app"><a href="#談談Web-open-in-mobile-app" class="headerlink" title="談談Web open in mobile app"></a>談談Web open in mobile app</h2><blockquote>
 <p>常常開發的網頁在Line或Messenger，甚至是其他應用程式中打開居然就壞了！！明明自己寫跟測試的時候都正常啊？</p>
 </blockquote>
 <p>首先我們要理解，在手機應用程式內開啟的瀏覽器，與我們一般打開的browser有所出入，事實上俗稱<strong>Webview</strong>（以Chrome、Safari為主）</p>
-<h3>Webview (In App Web)</h3>
-<p>根據Webkit引擎實作的手機內核瀏覽器，只是為了簡單的展示網頁，因此有些功能很可能沒有實作上去，像是Webview所打開的Safari就沒有cookie功能</p>
-<h2>回到源頭：萬一這些In app web沒有實作這些CSS？</h2>
-<p>這時或許只好從JS的角度來解決問題</p>
+<h3 id="Webview-In-App-Web"><a href="#Webview-In-App-Web" class="headerlink" title="Webview (In App Web)"></a>Webview (In App Web)</h3><p>根據Webkit引擎實作的手機內核瀏覽器，只是為了簡單的展示網頁，因此有些功能很可能沒有實作上去，像是Webview所打開的Safari就沒有cookie功能</p>
+<h2 id="回到源頭：萬一這些In-app-web沒有實作這些CSS？"><a href="#回到源頭：萬一這些In-app-web沒有實作這些CSS？" class="headerlink" title="回到源頭：萬一這些In app web沒有實作這些CSS？"></a>回到源頭：萬一這些In app web沒有實作這些CSS？</h2><p>這時或許只好從JS的角度來解決問題</p>
 <p>以這次的範例來思考，是不是可以再滾動的末尾在偷偷給加上一些數值？讓他假裝滑順（先不考慮它的加速度狀況）</p>
-<p>首先我會直覺想到Dom的<strong>scroll event</strong>、<strong>wheel event</strong>
-註：scroll偵測scrollbar的變動，wheel偵測滑鼠滾輪滾動</p>
-<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;wrap&quot;&gt;</span><br><span class="line">    &lt;ul&gt;</span><br><span class="line">        &lt;li&gt;...&lt;/li&gt;</span><br><span class="line">        ....無限多</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
-<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> el = <span class="built_in">document</span>.querySelector(<span class="string">'#wrap'</span>)</span><br><span class="line">el.addEventListener(<span class="string">'scroll'</span>,(event)=&gt;&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'正在scroll'</span>);  </span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<p>首先我會直覺想到Dom的<strong>scroll event</strong>、<strong>wheel event</strong><br>註：scroll偵測scrollbar的變動，wheel偵測滑鼠滾輪滾動</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;wrap&quot;&gt;</span><br><span class="line">    &lt;ul&gt;</span><br><span class="line">        &lt;li&gt;...&lt;/li&gt;</span><br><span class="line">        ....無限多</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> el = <span class="built_in">document</span>.querySelector(<span class="string">'#wrap'</span>)</span><br><span class="line">el.addEventListener(<span class="string">'scroll'</span>,(event)=&gt;&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'正在scroll'</span>);  </span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p>可以偵測到每次地滾動，不過我要的應該是最後一個scroll的事件而不是每一個都給它加上數值，可以使用<strong>setTimeout</strong></p>
-<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> el = <span class="built_in">document</span>.querySelector(<span class="string">'#wrap'</span>)</span><br><span class="line"><span class="keyword">let</span> timer = <span class="literal">null</span></span><br><span class="line">el.addEventListener(<span class="string">'scroll'</span>,(event) =&gt; &#123;</span><br><span class="line">    <span class="keyword">if</span>(timer !== <span class="literal">null</span>) &#123;</span><br><span class="line">      clearTimeout(timer);</span><br><span class="line">    &#125;</span><br><span class="line">    timer = setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'這次scroll最後一個event'</span>);</span><br><span class="line">    &#125;, <span class="number">100</span>);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> el = <span class="built_in">document</span>.querySelector(<span class="string">'#wrap'</span>)</span><br><span class="line"><span class="keyword">let</span> timer = <span class="literal">null</span></span><br><span class="line">el.addEventListener(<span class="string">'scroll'</span>,(event) =&gt; &#123;</span><br><span class="line">    <span class="keyword">if</span>(timer !== <span class="literal">null</span>) &#123;</span><br><span class="line">      clearTimeout(timer);</span><br><span class="line">    &#125;</span><br><span class="line">    timer = setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'這次scroll最後一個event'</span>);</span><br><span class="line">    &#125;, <span class="number">100</span>);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p>但是做到這開始思考，大部分容易出這個狀況的應該是在mobile，那麼滑螢幕滾動時有按下去的瞬間以及釋放的瞬間，是不是使用<strong>touch event</strong>更加合適？</p>
-<h3>touch event</h3>
-<p>共有四組</p>
+<h3 id="touch-event"><a href="#touch-event" class="headerlink" title="touch event"></a>touch event</h3><p>共有四組</p>
 <ul>
 <li>touchstart</li>
 <li>touchend</li>
@@ -235,16 +217,11 @@ Firefox在mobile中也有部分使用Webkit實作</p>
 <li>touchmove</li>
 </ul>
 <p>目前狀況看起來可使用touchend事件，來讓滑動的最後加上一些數值</p>
-<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> el = <span class="built_in">document</span>.querySelector(<span class="string">'#wrap'</span>)</span><br><span class="line">el.addEventListener(<span class="string">'touchend'</span>,(event)=&gt;&#123;</span><br><span class="line">    setTimeout(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">        el.scrollTop = el.scrollTop + <span class="number">20</span></span><br><span class="line">    &#125;,<span class="number">1000</span>)</span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure></p>
-<p>當手離開時（touchend），把scrollTop偷偷加20模擬smooth的感覺
-不過這樣會頓一下，因為是直接加上20所以會直接跳到那個位置
-如果要有點smooth的feel我們可以用setInterval</p>
-<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> el = <span class="built_in">document</span>.querySelector(<span class="string">'#wrap'</span>)</span><br><span class="line">el.addEventListener(<span class="string">'touchend'</span>,(event)=&gt;&#123;</span><br><span class="line">    setTimeout(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">      <span class="keyword">var</span> final = el.scrollTop + <span class="number">20</span></span><br><span class="line">      scrollInterval = setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">      <span class="keyword">if</span> (el.scrollTop &lt; final) &#123;</span><br><span class="line">        el.scrollTop = el.scrollTop + <span class="number">5</span></span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">else</span> clearInterval(scrollInterval);</span><br><span class="line">      &#125;,<span class="number">15</span>);</span><br><span class="line">    &#125;,<span class="number">100</span>)</span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure></p>
-<p>當手離開時，每0.015秒scrollTop加上5直到加滿20
-這樣下來就稍微有模擬smooth的樣子
-當然了，如果要讓它非常的滑順，則需要有良好計算及演算</p>
-<p>PS:若想要使用手機debug，除了Chrome Dev Tool之外可使用
-https://console.re/</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> el = <span class="built_in">document</span>.querySelector(<span class="string">'#wrap'</span>)</span><br><span class="line">el.addEventListener(<span class="string">'touchend'</span>,(event)=&gt;&#123;</span><br><span class="line">    setTimeout(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">        el.scrollTop = el.scrollTop + <span class="number">20</span></span><br><span class="line">    &#125;,<span class="number">1000</span>)</span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
+<p>當手離開時（touchend），把scrollTop偷偷加20模擬smooth的感覺<br>不過這樣會頓一下，因為是直接加上20所以會直接跳到那個位置<br>如果要有點smooth的feel我們可以用setInterval</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> el = <span class="built_in">document</span>.querySelector(<span class="string">'#wrap'</span>)</span><br><span class="line">el.addEventListener(<span class="string">'touchend'</span>,(event)=&gt;&#123;</span><br><span class="line">    setTimeout(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">      <span class="keyword">var</span> final = el.scrollTop + <span class="number">20</span></span><br><span class="line">      scrollInterval = setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">      <span class="keyword">if</span> (el.scrollTop &lt; final) &#123;</span><br><span class="line">        el.scrollTop = el.scrollTop + <span class="number">5</span></span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">else</span> clearInterval(scrollInterval);</span><br><span class="line">      &#125;,<span class="number">15</span>);</span><br><span class="line">    &#125;,<span class="number">100</span>)</span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
+<p>當手離開時，每0.015秒scrollTop加上5直到加滿20<br>這樣下來就稍微有模擬smooth的樣子<br>當然了，如果要讓它非常的滑順，則需要有良好計算及演算</p>
+<p>PS:若想要使用手機debug，除了Chrome Dev Tool之外可使用<br><a href="https://console.re/" target="_blank" rel="noopener">https://console.re/</a></p>
 
         
         <div id="comment-container">
