@@ -164,6 +164,7 @@
   padding-top: 3em;
 }
 .project{
+  margin-left: 1.5rem;
   max-height: 65px;
   overflow: hidden;
   transition: max-height 1s;
@@ -181,11 +182,11 @@
 .project-title{
   cursor: pointer;
   color: #3d3d3d;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   padding-bottom: 0.3em;
   border-bottom: 1px solid #eee;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: bold;
 }
 .project-title:hover{
@@ -218,6 +219,7 @@
 .project-img{
   max-width: 100%;
 }
+
 
 </style>
 
@@ -466,11 +468,12 @@
 
 <script>
   let project = document.querySelectorAll('.project')
+  let projectTitle = document.querySelectorAll('.project-title')
   let projectOpenOpacity = document.querySelectorAll('.project-open-opacity')
   let pti = document.querySelectorAll('.project-title img')
   for(let i = 0 ; i < project.length ; i++){
-    project[i].addEventListener('click', function(e) {
-      this.classList.toggle("project-open")
+    projectTitle[i].addEventListener('click', function(e) {
+      project[i].classList.toggle("project-open")
       projectOpenOpacity[i].classList.toggle("open-opacity")
       pti[i].classList.toggle("arrow-rotate")
     })
