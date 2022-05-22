@@ -1,0 +1,14 @@
+baseURL: http://example.org/
+languageCode: en-us
+title: Hakka Blog
+theme: "PaperMod"
+
+params:
+  homeInfoParams:
+    Title: "PaperMod"
+    Content: >
+      Welcome to HAKKA Blog, aka 美濃最強 frontend blog.
+
+      - 剎猛打拚耕山耕田
+
+      - 咬薑啜醋幾十年　毋識埋怨
