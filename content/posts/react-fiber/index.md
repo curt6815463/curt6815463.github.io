@@ -145,9 +145,13 @@ call stack 是個不錯的演算邏輯，但遇到 react 畫面的處理上，�
 
 在 tree 很龐大的時候，call stack 會花太多時間執行，導致有些畫面的更新讓 User 感覺太慢卡卡的，尤其是 `動畫` 。
 
-### 怎麼解決？使用 Fiber 架構
+### Browser 更新邏輯
+
+// 需要補齊
 
 理論上只要每次畫面更新的頻率在 16 毫秒(ms)以內，大部的人類不會察覺到差異（≥ 60 FPS)，所以 react 使用 `requestIdleCallback` api 來處理不重要的 work，requestIdleCallback 裡會告訴你 Main Thread 還剩多少時間可處理 work，變成 0ms 時就把 work 給暫停掉甚至丟掉，假如這個 work 很重要，那就會放到 `requestAnimationFrame` 內。
+
+### 怎麼解決？使用 Fiber 架構
 
 在 Fiber 架構下的 reconciler， 使用 `while` 建立 `Linked List tree` ，while 的條件上除了確認是否還有 `下一個` 外，還會用個 flag： `shouldYield()` ，來確認 main thread 有沒有空。
 
