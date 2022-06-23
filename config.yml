@@ -5,10 +5,6 @@ theme: "PaperMod"
 
 params:
   homeInfoParams:
-    Title: "PaperMod"
+    Title: "Hi， 我是 Curt 家人，是 Web 前端工程師"
     Content: >
-      Welcome to HAKKA Blog, aka 美濃最強 frontend blog.
-
-      - 剎猛打拚耕山耕田
-
-      - 咬薑啜醋幾十年　毋識埋怨
+      - 只要做困難的事，生活就變得簡單
